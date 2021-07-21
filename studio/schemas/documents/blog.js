@@ -1,7 +1,10 @@
 export default {
-  name: "hero",
-  type: "object",
-  title: "Hero",
+  name: "blog",
+  type: "document",
+  title: "Blog",
+  initialValue: {
+    slug: "blog",
+  },
   fields: [
     {
       name: "title",
@@ -9,12 +12,10 @@ export default {
       title: "Title",
     },
     {
-      title: "Main image",
-      name: "mainImage",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      name: "slug",
+      type: "string",
+      title: "Slug",
+      readOnly: true,
     },
   ],
 

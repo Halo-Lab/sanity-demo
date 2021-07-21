@@ -1,8 +1,8 @@
 import { MdLocalDrink } from "react-icons/md";
 
 export default {
-  name: "product",
-  title: "Product",
+  name: "post",
+  title: "Post",
   type: "document",
   icon: MdLocalDrink,
   fields: [
@@ -20,16 +20,6 @@ export default {
       },
     },
     {
-      name: "blurb",
-      title: "Blurb",
-      type: "localeString",
-    },
-    {
-      name: "body",
-      title: "Body",
-      type: "localeBlockContent",
-    },
-    {
       title: "Tags",
       name: "tags",
       type: "array",
@@ -41,28 +31,6 @@ export default {
       options: {
         layout: "tags",
       },
-    },
-    {
-      title: "Default variant",
-      name: "defaultProductVariant",
-      type: "productVariant",
-    },
-    {
-      title: "Variants",
-      name: "variants",
-      type: "array",
-      of: [
-        {
-          title: "Variant",
-          type: "productVariant",
-        },
-      ],
-    },
-    {
-      name: "vendor",
-      title: "Vendor",
-      type: "reference",
-      to: { type: "vendor" },
     },
     {
       name: "categories",

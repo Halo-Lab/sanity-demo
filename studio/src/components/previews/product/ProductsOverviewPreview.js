@@ -5,8 +5,8 @@ export default function ProductsOverviewPreview(props) {
   const { displayed } = props;
   const url =
     process.env.NODE_ENV === "production"
-      ? `/products?preview`
-      : "http://localhost:3000/products?preview";
+      ? `/blog?preview`
+      : "http://localhost:3000/blog?preview";
   return (
     <div className={styles.componentWrapper}>
       <div className={styles.iframeContainer}>

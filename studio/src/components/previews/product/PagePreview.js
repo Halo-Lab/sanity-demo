@@ -3,13 +3,18 @@ import styles from "./IframePreview.css";
 
 export default function ProductsPreview(props) {
   const { displayed } = props.document;
-  if (!displayed?.slug?.current) {
+  console.log(props);
+  if (!displayed?.slug) {
     return <div>The product needs a slug before it can be previewed.</div>;
   }
+
+  const pageSlug =
+    props.document.displayed._type === "home" ? "" : displayed?.slug;
+  console.log(props.document.displayed._type);
   const url =
     process.env.NODE_ENV === "production"
-      ? `../../blog/${displayed?.slug?.current}?preview`
-      : `http://localhost:3000/blog/${displayed?.slug?.current}?preview`;
+      ? `../../${pageSlug}?preview`
+      : `http://localhost:3000/${pageSlug}?preview`;
 
   return (
     <div className={styles.componentWrapper}>

@@ -1,7 +1,7 @@
 export default {
-  name: "hero",
+  name: "about",
   type: "object",
-  title: "Hero",
+  title: "About",
   fields: [
     {
       name: "title",
@@ -9,8 +9,13 @@ export default {
       title: "Title",
     },
     {
-      title: "Main image",
-      name: "mainImage",
+      name: "description",
+      type: "text",
+      title: "Description",
+    },
+    {
+      title: "Image",
+      name: "image",
       type: "image",
       options: {
         hotspot: true,

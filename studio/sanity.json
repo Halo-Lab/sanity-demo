@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "placeholder",
-    "dataset": "placeholder"
+    "projectId": "bfh5b7c9",
+    "dataset": "production"
   },
   "project": {
-    "name": "Next.JS E-commerce example",
+    "name": "Sanity demo",
     "basePath": "/studio"
   },
   "plugins": [
@@ -18,9 +18,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
