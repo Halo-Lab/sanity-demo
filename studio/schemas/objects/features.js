@@ -1,3 +1,5 @@
+import AssetSource from "part:sanity-plugin-media-library/asset-source";
+
 export default {
   name: "features",
   type: "object",
@@ -27,6 +29,9 @@ export default {
               name: "featureIcon",
               type: "image",
               title: "Feature icon",
+              options: {
+                sources: [AssetSource],
+              },
             },
           ],
         },

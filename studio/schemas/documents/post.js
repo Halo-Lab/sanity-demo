@@ -1,4 +1,5 @@
 import { MdLocalDrink } from "react-icons/md";
+import AssetSource from "part:sanity-plugin-media-library/asset-source";
 
 export default {
   name: "post",
@@ -32,6 +33,7 @@ export default {
       type: "image",
       options: {
         hotspot: true,
+        sources: [AssetSource],
       },
     },
     {

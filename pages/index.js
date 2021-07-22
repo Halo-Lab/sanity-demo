@@ -4,8 +4,13 @@ import { useRouter } from "next/router";
 import { getClient, usePreviewSubscription } from "../utils/sanity";
 import Home from "../scenes/Home";
 
-const query = groq`*[_type == "home"][0]
-`;
+const query = groq`*[_type=="home"][0] {
+  ...,
+ hero {
+    ...,
+    "mainImage": mainImage.asset->
+  }
+}`;
 
 function IndexPage(props) {
   const { productsData, preview } = props;

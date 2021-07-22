@@ -23,5 +23,10 @@ export default {
     select: {
       title: "title",
     },
+    prepare() {
+      return {
+        title: "Blog page",
+      };
+    },
   },
 };

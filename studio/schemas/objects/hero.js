@@ -1,3 +1,5 @@
+import AssetSource from "part:sanity-plugin-media-library/asset-source";
+
 export default {
   name: "hero",
   type: "object",
@@ -16,6 +18,7 @@ export default {
       validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
+        sources: [AssetSource],
       },
     },
   ],

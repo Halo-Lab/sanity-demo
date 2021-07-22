@@ -1,3 +1,5 @@
+import AssetSource from "part:sanity-plugin-media-library/asset-source";
+
 export default {
   name: "about",
   type: "object",
@@ -19,6 +21,7 @@ export default {
       type: "image",
       options: {
         hotspot: true,
+        sources: [AssetSource],
       },
     },
   ],

@@ -15,6 +15,7 @@ const Home = ({ data }) => {
             .fit("crop")
             .width(1920)
             .quality(80)}
+          alt={hero.mainImage.alt}
         />
       </section>
       <section className="about">
