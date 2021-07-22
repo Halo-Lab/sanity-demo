@@ -16,3 +16,41 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.about img {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+.about h2,
+.about p {
+  padding-left: 40px;
+}
+
+.about p {
+  align-self: start;
+}
+.about h2 {
+  align-self: end;
+}

@@ -18,12 +18,13 @@ function IndexPage(props) {
     enabled: preview || router.query.preview !== null,
   });
 
-  const { hero, about } = data;
+  const { hero, about, newField } = data;
 
   return (
     <div className="my-8">
-      <section>
+      <section className="hero">
         <h1>{hero.title}</h1>
+        <div>{newField}</div>
 
         <img
           src={urlFor(hero.mainImage)
@@ -33,7 +34,7 @@ function IndexPage(props) {
             .quality(80)}
         />
       </section>
-      <section>
+      <section className="about">
         <h2>{about.title}</h2>
         <p>{about.description}</p>
         <img src={urlFor(about.image).auto("format").width(1920)} />
