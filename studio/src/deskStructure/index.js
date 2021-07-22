@@ -9,14 +9,7 @@ import PagePreview from "../components/previews/product/PagePreview";
 import ProductsOverviewPreview from "../components/previews/product/ProductsOverviewPreview";
 // Hide document types that we already have a structure definition for
 const hiddenDocTypes = (listItem) =>
-  ![
-    "category",
-
-    // "sampleProject",
-
-    "siteSettings",
-    "siteConfig",
-  ].includes(listItem.getId());
+  !["category", "siteSettings", "siteConfig"].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -51,7 +44,6 @@ export default () =>
                 .child(S.documentTypeList("blog").title("Blog page")),
             ])
         ),
-      // ads,
       // ...S.documentTypeListItems().filter(hiddenDocTypes),
     ]);
 

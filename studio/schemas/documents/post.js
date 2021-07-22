@@ -12,38 +12,6 @@ export default {
       type: "string",
     },
     {
-      title: "Main image",
-      name: "mainImage",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      title: "Tags",
-      name: "tags",
-      type: "array",
-      of: [
-        {
-          type: "string",
-        },
-      ],
-      options: {
-        layout: "tags",
-      },
-    },
-    {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: { type: "category" },
-        },
-      ],
-    },
-    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -52,13 +20,42 @@ export default {
         maxLength: 96,
       },
     },
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "text",
+      rows: 5,
+    },
+    {
+      title: "Main image",
+      name: "mainImage",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "date",
+      title: "Date",
+      type: "date",
+    },
+    {
+      name: "author",
+      title: "Author",
+      type: "string",
+    },
   ],
 
   preview: {
     select: {
       title: "title",
-      manufactor: "manufactor.title",
-      media: "defaultProductVariant.images[0]",
+      image: "mainImage",
+    },
+    prepare: ({ title, slug, image, status }) => {
+      return {
+        title,
+        media: image,
+      };
     },
   },
 };

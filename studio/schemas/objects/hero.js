@@ -7,11 +7,13 @@ export default {
       name: "title",
       type: "string",
       title: "Title",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Main image",
       name: "mainImage",
       type: "image",
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       },

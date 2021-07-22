@@ -17,6 +17,8 @@ export default {
       title: "Slug",
       readOnly: true,
     },
+    { name: "newField", type: "string", title: "New Field" },
+
     {
       name: "hero",
       type: "hero",

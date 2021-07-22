@@ -12,6 +12,7 @@ import blog from "./documents/blog";
 import hero from "./objects/hero";
 import about from "./objects/about";
 import features from "./objects/features";
+import testimonial from "./objects/testimonial";
 
 import siteConfig from "./documents/siteConfig";
 
@@ -32,5 +33,6 @@ export default createSchema({
     hero,
     about,
     features,
+    testimonial,
   ]),
 });
