@@ -1,7 +1,8 @@
 import Error from "next/error";
 import { groq } from "next-sanity";
 import { useRouter } from "next/router";
-import { getClient, usePreviewSubscription, urlFor } from "../utils/sanity";
+import { getClient, usePreviewSubscription } from "../utils/sanity";
+import Home from "../scenes/Home";
 
 const query = groq`*[_type == "home"][0]
 `;
@@ -18,27 +19,9 @@ function IndexPage(props) {
     enabled: preview || router.query.preview !== null,
   });
 
-  const { hero, about, newField } = data;
-
   return (
-    <div className="my-8">
-      <section className="hero">
-        <h1>{hero.title}</h1>
-        <div>{newField}</div>
-
-        <img
-          src={urlFor(hero.mainImage)
-            .auto("format")
-            .fit("crop")
-            .width(1920)
-            .quality(80)}
-        />
-      </section>
-      <section className="about">
-        <h2>{about.title}</h2>
-        <p>{about.description}</p>
-        <img src={urlFor(about.image).auto("format").width(1920)} />
-      </section>
+    <div>
+      <Home data={data} />
     </div>
   );
 }

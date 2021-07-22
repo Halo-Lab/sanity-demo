@@ -20,13 +20,11 @@ function BlogPage(props) {
     enabled: true,
   });
 
-  console.log(prod);
-
   const { title } = data;
 
   return (
-    <div className="my-8">
-      <div className="mt-4">{title}</div>
+    <div>
+      <h1>{title}</h1>
       <div>
         <Posts posts={prod} />
       </div>
@@ -37,8 +35,6 @@ function BlogPage(props) {
 export async function getStaticProps({ params = {}, preview = false }) {
   const blogData = await getClient(preview).fetch(query);
   const postData = await getClient(preview).fetch(postsQuery);
-
-  console.log({ postData });
 
   return {
     props: {
