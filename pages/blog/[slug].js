@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { getClient, usePreviewSubscription, urlFor } from "../../utils/sanity";
+import BlockContent from "@sanity/block-content-to-react";
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]`;
 
@@ -10,7 +11,7 @@ function PostPage({ postData, preview }) {
     enabled: true,
   });
 
-  const { title, mainImage } = post;
+  const { title, mainImage, text } = post;
   return (
     <div>
       <h1>{title}</h1>
@@ -20,6 +21,12 @@ function PostPage({ postData, preview }) {
           .fit("crop")
           .width(1920)
           .quality(80)}
+      />
+      <BlockContent
+        blocks={text}
+        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+        className="markdown"
       />
     </div>
   );

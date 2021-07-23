@@ -46,6 +46,11 @@ export default {
       title: "Author",
       type: "string",
     },
+    {
+      title: "Text block",
+      name: "text",
+      type: "blockContent",
+    },
   ],
 
   preview: {

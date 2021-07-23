@@ -13,6 +13,7 @@ import hero from "./objects/hero";
 import about from "./objects/about";
 import features from "./objects/features";
 import testimonial from "./objects/testimonial";
+import blockContent from "./objects/blockContent";
 
 import siteConfig from "./documents/siteConfig";
 
@@ -34,5 +35,6 @@ export default createSchema({
     about,
     features,
     testimonial,
+    blockContent,
   ]),
 });
