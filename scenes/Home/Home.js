@@ -7,6 +7,7 @@ const Home = ({ data }) => {
   return (
     <div className={styles.wrapper}>
       <section className="hero">
+        {/* {console.log(about)} */}
         <h1>{hero.title}</h1>
 
         <img

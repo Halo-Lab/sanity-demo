@@ -1,0 +1,39 @@
+.header {
+  padding: 16px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(87, 87, 87);
+  }
+
+  a + a {
+    margin-left: 20px;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.signIn {
+  background: transparent;
+  border: 1px solid rgba(33, 51, 79, 0.7);
+  border-radius: 12px;
+  color: #21334f;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 17px;
+  min-width: auto;
+  padding: 13px 25px;
+}
+
+.navRight {
+  display: flex;
+  flex-direction: row;
+}

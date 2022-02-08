@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { urlFor } from "../utils/sanity";
+import { urlFor } from "../../utils/sanity";
 
 function PostCard({ title, mainImage, slug }) {
   return (
