@@ -5,29 +5,29 @@ import s from "./Header.module.scss";
 const Header = () => {
   return (
     <header className={s.header}>
-      <div>
-        <nav className={s.navigation}>
+      <div className="container">
+        <div className={s.headerWrap}>
           <Link href="/">
-            <a>
-              <div className={s.logo}>
-                <Logo />
-              </div>
+            <a className={s.logo}>
+              <Logo />
             </a>
           </Link>
-          <div className={s.navRight}>
-            <Link href="/about">
-              <a>About us</a>
-            </Link>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-            <Link href="/signIn">
-              <a>
-                <div>Sign in</div>
-              </a>
-            </Link>
+          <div className={s.headerRight}>
+            <div className={s.menu}>
+              <Link href="/about">
+                <a className={s.menuLink}>About us</a>
+              </Link>
+              <Link href="/blog">
+                <a className={s.menuLink}>Blog</a>
+              </Link>
+              <Link href="/signIn">
+                <a className={s.button} rel="nofollow">
+                  <div className={s.buttonWrapper}>Sign In</div>
+                </a>
+              </Link>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
   );
