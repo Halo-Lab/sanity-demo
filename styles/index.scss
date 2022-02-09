@@ -50,3 +50,37 @@ main {
   max-width: 400px;
   display: block;
 }
+
+html {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffbf7;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #21334f;
+}
+
+.layout {
+  overflow: hidden;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}

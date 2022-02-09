@@ -27,6 +27,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
+    // partners,
     category,
     siteConfig,
     home,

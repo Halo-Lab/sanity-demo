@@ -1,29 +1,18 @@
-import styles from "./Home.module.scss";
+import s from "./Home.module.scss";
 import { urlFor } from "../../utils/sanity";
+import Hero from "./components/Hero";
 
 const Home = ({ data }) => {
-  const { hero, about } = data;
+  // const { hero, about } = data;
 
   return (
-    <div className={styles.wrapper}>
-      <section className="hero">
-        {/* {console.log(about)} */}
-        <h1>{hero.title}</h1>
-
-        <img
-          src={urlFor(hero.mainImage)
-            .auto("format")
-            .fit("crop")
-            .width(1920)
-            .quality(80)}
-          alt={hero.mainImage.alt}
-        />
-      </section>
-      <section className="about">
+    <div className={s.container}>
+      <Hero data={data} urlFor={urlFor} />
+      {/* <section className="about">
         <h2>{about.title}</h2>
         <p>{about.description}</p>
         <img src={urlFor(about.image).auto("format").width(1920)} />
-      </section>
+      </section> */}
     </div>
   );
 };

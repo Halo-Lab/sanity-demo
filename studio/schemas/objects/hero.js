@@ -21,6 +21,11 @@ export default {
         sources: [AssetSource],
       },
     },
+    {
+      name: "description",
+      type: "text",
+      title: "Description",
+    },
   ],
 
   preview: {
