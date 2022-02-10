@@ -1,0 +1,13 @@
+.partnersItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 575px) {
+    width: 45%;
+  }
+}
+.img {
+  width: 90px;
+  height: 28px;
+}

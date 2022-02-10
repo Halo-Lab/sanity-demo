@@ -1,10 +1,8 @@
 import s from "./Partners.module.scss";
-import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPrimary";
-import ButtonWithArrow from "../../../../components/Buttons/ButtonWithArrow/ButtonWithArrow";
 import PartnersItem from "./PartnersItem/PartnersItem";
 
-const Partners = ({ data, urlFor }) => {
-  const { partners } = data.partners;
+const Partners = ({ data }) => {
+  const { partners, title, description } = data.partners;
   const partnersItem = partners.map((item, index) => {
     return <PartnersItem data={item} key={index} />;
   });
@@ -13,8 +11,8 @@ const Partners = ({ data, urlFor }) => {
     <div className="section">
       <div className={s.partners}>
         <div className="container">
-          <span className="section-category">Partners</span>
-          <h3 className="section-title">Trusted by over 260 companies</h3>
+          <span className="section-category">{description}</span>
+          <h3 className="section-title">{title}</h3>
           <div className="section-content">
             <div className={s.partnersList}>{partnersItem}</div>
           </div>

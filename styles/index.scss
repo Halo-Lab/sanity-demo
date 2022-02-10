@@ -97,3 +97,86 @@ button {
     }
   }
 }
+
+.section-content {
+  padding-top: 72px;
+
+  @media screen and (max-width: 991px) {
+    padding-top: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 48px;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding-top: 32px;
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 120%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 991px) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 575px) {
+    font-size: 28px;
+  }
+
+  &--brown {
+    color: #5f3f2d;
+  }
+
+  &--small {
+    max-width: 480px;
+  }
+
+  &--inner {
+    text-align: left;
+  }
+
+  &--center-mobile {
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
+.section-category {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  padding-bottom: 24px;
+  text-transform: uppercase;
+  color: #26b5e3;
+
+  @media screen and (max-width: 575px) {
+    font-size: 14px;
+    padding-bottom: 16px;
+  }
+
+  &--red {
+    color: #f94144;
+  }
+
+  &--inner {
+    text-align: left;
+  }
+
+  &--center-mobile {
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 import s from "./Hero.module.scss";
 import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPrimary";
 import ButtonWithArrow from "../../../../components/Buttons/ButtonWithArrow/ButtonWithArrow";
+import { urlFor } from "../../../../utils/sanity";
 
-const Hero = ({ data, urlFor }) => {
+const Hero = ({ data }) => {
   const { hero } = data;
-  console.log(hero);
   return (
     <div className="section">
       <div className={s.hero}>
