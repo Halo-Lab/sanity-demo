@@ -1,10 +1,10 @@
 import s from "./Hero.module.scss";
-import ButtonPrimary from "../../../components/Buttons/ButtonPrimary/ButtonPrimary";
-import ButtonWithArrow from "../../../components/Buttons/ButtonWithArrow/ButtonWithArrow";
+import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPrimary";
+import ButtonWithArrow from "../../../../components/Buttons/ButtonWithArrow/ButtonWithArrow";
 
 const Hero = ({ data, urlFor }) => {
   const { hero } = data;
-
+  console.log(hero);
   return (
     <div className="section">
       <div className={s.hero}>

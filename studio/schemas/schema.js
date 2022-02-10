@@ -14,7 +14,7 @@ import about from "./objects/about";
 import features from "./objects/features";
 import testimonial from "./objects/testimonial";
 import blockContent from "./objects/blockContent";
-
+import partners from "./objects/partners";
 import siteConfig from "./documents/siteConfig";
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -27,7 +27,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
-    // partners,
+    partners,
     category,
     siteConfig,
     home,

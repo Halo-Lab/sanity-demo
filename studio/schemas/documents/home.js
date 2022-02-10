@@ -6,18 +6,18 @@ export default {
     slug: "/",
   },
   fields: [
-    // {
-    //   name: "title",
-    //   type: "string",
-    //   title: "Title",
-    // },
-    // {
-    //   name: "slug",
-    //   type: "string",
-    //   title: "Slug",
-    //   readOnly: true,
-    // },
-    // { name: "newField", type: "string", title: "New Field" },
+    {
+      name: "title",
+      type: "string",
+      title: "Title",
+    },
+    {
+      name: "slug",
+      type: "string",
+      title: "Slug",
+      readOnly: true,
+    },
+    { name: "newField", type: "string", title: "New Field" },
 
     {
       name: "hero",
@@ -28,8 +28,8 @@ export default {
       type: "about",
     },
     {
-      name: "features",
-      type: "features",
+      name: "partners",
+      type: "partners",
     },
   ],
 
