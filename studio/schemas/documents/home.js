@@ -39,6 +39,10 @@ export default {
       name: "stats",
       type: "stats",
     },
+    {
+      name: "mobileApp",
+      type: "mobileApp",
+    },
   ],
 
   preview: {

@@ -3,7 +3,6 @@ import BenefitsItem from "./BenefitsItem/BenefitsItem";
 
 const Benefits = ({ data }) => {
   const { benefits, benefitGeneralTitle, benefitCategory } = data.benefits;
-  console.log(benefits);
 
   const benefitsItems = benefits.map((item, index) => {
     return <BenefitsItem data={item} key={index} />;

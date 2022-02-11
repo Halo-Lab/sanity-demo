@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Partners from "./components/Partners/Partners";
 import Benefits from "./components/Benefits/Benefits";
 import Stats from "./components/Stats/Stats";
+import MobileApp from "./components/MobileApp/MobileApp";
 
 const Home = ({ data }) => {
   return (
@@ -12,6 +13,7 @@ const Home = ({ data }) => {
       <Partners data={data} />
       <Benefits data={data} />
       <Stats data={data} />
+      <MobileApp data={data} />
     </div>
   );
 };
