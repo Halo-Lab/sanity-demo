@@ -43,6 +43,10 @@ export default {
       name: "mobileApp",
       type: "mobileApp",
     },
+    {
+      name: "testimonials",
+      type: "testimonials",
+    },
   ],
 
   preview: {

@@ -19,6 +19,7 @@ import siteConfig from "./documents/siteConfig";
 import benefits from "./objects/benefits";
 import stats from "./objects/stats";
 import mobileApp from "./objects/mobileApp";
+import testimonails from "./objects/testimonials";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -43,5 +44,6 @@ export default createSchema({
     benefits,
     stats,
     mobileApp,
+    testimonails,
   ]),
 });

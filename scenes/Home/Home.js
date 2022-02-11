@@ -5,6 +5,7 @@ import Partners from "./components/Partners/Partners";
 import Benefits from "./components/Benefits/Benefits";
 import Stats from "./components/Stats/Stats";
 import MobileApp from "./components/MobileApp/MobileApp";
+import Testimonials from "./components/Testimonials/Testimonials";
 
 const Home = ({ data }) => {
   return (
@@ -14,6 +15,7 @@ const Home = ({ data }) => {
       <Benefits data={data} />
       <Stats data={data} />
       <MobileApp data={data} />
+      <Testimonials data={data} />
     </div>
   );
 };
