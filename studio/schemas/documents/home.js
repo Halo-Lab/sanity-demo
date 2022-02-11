@@ -31,6 +31,14 @@ export default {
       name: "partners",
       type: "partners",
     },
+    {
+      name: "benefits",
+      type: "benefits",
+    },
+    {
+      name: "stats",
+      type: "stats",
+    },
   ],
 
   preview: {

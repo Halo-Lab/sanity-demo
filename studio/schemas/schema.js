@@ -16,6 +16,8 @@ import testimonial from "./objects/testimonial";
 import blockContent from "./objects/blockContent";
 import partners from "./objects/partners";
 import siteConfig from "./documents/siteConfig";
+import benefits from "./objects/benefits";
+import stats from "./objects/stats";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -37,5 +39,7 @@ export default createSchema({
     features,
     testimonial,
     blockContent,
+    benefits,
+    stats,
   ]),
 });
