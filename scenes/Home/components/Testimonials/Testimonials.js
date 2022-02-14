@@ -1,10 +1,16 @@
+import React, { useRef } from "react";
+
 import s from "./Testimonials.module.scss";
 import TestimonialsItem from "./TestimonialsItem/TestimonialsItem";
 import classnames from "classnames";
-// import Swiper from "react-id-swiper";
+import Swiper from "react-id-swiper";
+import "swiper/css";
+
 import SecondArrowIcon from "../../../../assets/SecondArrowIcon/SecondArrowIcon";
 
 const Testimonials = ({ data }) => {
+  const swiperRef = useRef(null);
+
   const sliderParams = {
     slidesPerView: "auto",
     spaceBetween: 16,
@@ -24,12 +30,15 @@ const Testimonials = ({ data }) => {
   };
 
   const goNext = () => {
+    console.log("next");
+
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   };
 
   const goPrev = () => {
+    console.log("prev");
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
@@ -37,7 +46,7 @@ const Testimonials = ({ data }) => {
 
   const { category, testimonialsArr, title } = data.testimonials;
 
-  const TestimonialsItems = testimonialsArr.map((item, index) => {
+  const testimonialItems = testimonialsArr.map((item, index) => {
     return <TestimonialsItem data={item} key={index} />;
   });
 
@@ -73,13 +82,13 @@ const Testimonials = ({ data }) => {
             </div>
           </div>
           <div className={s.testimonialSlider}>
-            {/* <Swiper
+            <Swiper
               ref={swiperRef}
               containerClass={s.testimonialSliderContainer}
               {...sliderParams}
             >
               {testimonialItems}
-            </Swiper> */}
+            </Swiper>
           </div>
         </div>
       </div>

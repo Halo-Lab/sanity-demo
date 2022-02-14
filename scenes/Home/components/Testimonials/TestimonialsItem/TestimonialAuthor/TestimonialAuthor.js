@@ -1,19 +1,13 @@
-import React from 'react';
-import { object, string } from 'prop-types';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import React from "react";
+import { urlFor } from "../../../../../../utils/sanity";
 
-import styles from './TestimonialAuthor.module.scss';
+import styles from "./TestimonialAuthor.module.scss";
 
 const TestimonialAuthor = ({ name, position, avatarImg, avatarAlt }) => {
   return (
     <div className={styles.testimonialAuthor}>
       <div className={styles.testimonialAuthorImg}>
-        <GatsbyImage
-          image={getImage(avatarImg)}
-          imgStyle={{ objectFit: 'contain' }}
-          style={{ width: '64px', height: '64px' }}
-          alt={avatarAlt}
-        />
+        <img src={urlFor(avatarImg)} className={styles.img} alt={avatarAlt} />
       </div>
       <div className={styles.testimonialAuthorInfo}>
         <span className={styles.testimonialAuthorName}>{name}</span>
@@ -21,13 +15,6 @@ const TestimonialAuthor = ({ name, position, avatarImg, avatarAlt }) => {
       </div>
     </div>
   );
-};
-
-TestimonialAuthor.propTypes = {
-  name: string,
-  position: string,
-  avatarImg: object,
-  avatarAlt: string,
 };
 
 export default TestimonialAuthor;
