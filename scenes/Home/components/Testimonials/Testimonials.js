@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import s from "./Testimonials.module.scss";
 import TestimonialsItem from "./TestimonialsItem/TestimonialsItem";
 import classnames from "classnames";
-import Swiper from "react-id-swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import SecondArrowIcon from "../../../../assets/SecondArrowIcon/SecondArrowIcon";
@@ -11,23 +11,23 @@ import SecondArrowIcon from "../../../../assets/SecondArrowIcon/SecondArrowIcon"
 const Testimonials = ({ data }) => {
   const swiperRef = useRef(null);
 
-  const sliderParams = {
-    slidesPerView: "auto",
-    spaceBetween: 16,
-    centeredSlides: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      768: {
-        centeredSlides: false,
-        spaceBetween: 40,
-        loop: false,
-      },
-    },
-  };
+  // const sliderParams = {
+  //   slidesPerView: "auto",
+  //   spaceBetween: 16,
+  //   centeredSlides: true,
+  //   loop: true,
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   breakpoints: {
+  //     768: {
+  //       centeredSlides: false,
+  //       spaceBetween: 40,
+  //       loop: false,
+  //     },
+  //   },
+  // };
 
   const goNext = () => {
     console.log("next");
@@ -47,7 +47,11 @@ const Testimonials = ({ data }) => {
   const { category, testimonialsArr, title } = data.testimonials;
 
   const testimonialItems = testimonialsArr.map((item, index) => {
-    return <TestimonialsItem data={item} key={index} />;
+    return (
+      <SwiperSlide>
+        <TestimonialsItem data={item} key={index} />;
+      </SwiperSlide>
+    );
   });
 
   return (
@@ -83,9 +87,19 @@ const Testimonials = ({ data }) => {
           </div>
           <div className={s.testimonialSlider}>
             <Swiper
+              slidesPerView={2}
+              spaceBetween={16}
+              centeredSlides={true}
+              loop={true}
+              // breakpoints: {
+              //   768: {
+              //     centeredSlides: false,
+              //     spaceBetween: 40,
+              //     loop: false,
+              //   },
+              // }
               ref={swiperRef}
               containerClass={s.testimonialSliderContainer}
-              {...sliderParams}
             >
               {testimonialItems}
             </Swiper>
