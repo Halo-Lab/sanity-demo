@@ -47,6 +47,10 @@ export default {
       name: "testimonials",
       type: "testimonials",
     },
+    {
+      name: "conversion",
+      type: "conversion",
+    },
   ],
 
   preview: {

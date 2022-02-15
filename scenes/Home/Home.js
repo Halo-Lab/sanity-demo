@@ -6,6 +6,7 @@ import Benefits from "./components/Benefits/Benefits";
 import Stats from "./components/Stats/Stats";
 import MobileApp from "./components/MobileApp/MobileApp";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Conversion from "./components/Conversion/Conversion";
 
 const Home = ({ data }) => {
   return (
@@ -16,6 +17,7 @@ const Home = ({ data }) => {
       <Stats data={data} />
       <MobileApp data={data} />
       <Testimonials data={data} />
+      <Conversion data={data} />
     </div>
   );
 };
