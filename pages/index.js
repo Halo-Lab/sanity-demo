@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { getClient, usePreviewSubscription } from "../utils/sanity";
 import Home from "../scenes/Home";
 
-// const query = groq`*[_type=="home"][0]`;
+const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 
 const query = groq`*[_type=="home"][0] {
   ...,
@@ -40,11 +40,12 @@ function IndexPage(props) {
 
 export async function getStaticProps({ params = {}, preview = false }) {
   const productsData = await getClient(preview).fetch(query);
-
+  const LayoutData = await getClient(preview).fetch(querySiteConfig);
   return {
     props: {
       preview,
       productsData,
+      LayoutData,
     },
   };
 }

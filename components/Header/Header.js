@@ -1,32 +1,32 @@
 import Link from "next/link";
-import Logo from "../../assets/logo";
-import s from "./Header.module.scss";
+import styles from "./Header.module.scss";
+import { urlFor } from "../../utils/sanity";
+import ButtonPrimary from "../Buttons/ButtonPrimary/ButtonPrimary";
+import Navigation from "./Navigation/Navigation";
+import Sandwich from "./Sandwich/Sandwich";
 
-const Header = () => {
+const Header = ({ LayoutData }) => {
+  const { headerLinkArr, logo, buttonObj } = LayoutData;
+  const { buttonLink, buttonText } = buttonObj;
+  console.log(headerLinkArr);
   return (
-    <header className={s.header}>
+    <header className={styles.header}>
       <div className="container">
-        <div className={s.headerWrap}>
+        <div className={styles.headerWrap}>
           <Link href="/">
-            <a className={s.logo}>
-              <Logo />
+            <a>
+              <img className="logo" style={{ width: 192 }} src={urlFor(logo)} />
             </a>
           </Link>
-          <div className={s.headerRight}>
-            <div className={s.menu}>
-              <Link href="/about">
-                <a className={s.menuLink}>About us</a>
-              </Link>
-              <Link href="/blog">
-                <a className={s.menuLink}>Blog</a>
-              </Link>
-              <Link href="/signIn">
-                <a className={s.button} rel="nofollow">
-                  <div className={s.buttonWrapper}>Sign In</div>
-                </a>
-              </Link>
-            </div>
+          <div className={styles.headerRight}>
+            <Navigation headerLinkArr={headerLinkArr} />
+            <ButtonPrimary buttonLink={buttonLink} buttonText={buttonText} />
           </div>
+          <Sandwich
+            headerLinkArr={headerLinkArr}
+            buttonLink={buttonLink}
+            buttonText={buttonText}
+          />
         </div>
       </div>
     </header>

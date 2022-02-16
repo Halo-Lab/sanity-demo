@@ -1,9 +1,11 @@
 import s from "./ButtonPrimary.module.scss";
 
-const ButtonPrimary = ({ buttonText }) => {
-  const { url } = "https://www.halo-lab.com/";
+const ButtonPrimary = ({
+  buttonText,
+  buttonLink = "https://www.halo-lab.com/",
+}) => {
   return (
-    <a href={url} className={s.button} rel="nofollow">
+    <a href={buttonLink} className={s.button} rel="nofollow">
       <div className={s.buttonWrapper}>{buttonText}</div>
     </a>
   );
