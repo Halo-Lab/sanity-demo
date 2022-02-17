@@ -8,8 +8,9 @@ import category from "./documents/category";
 import post from "./documents/post";
 import home from "./documents/home";
 import blog from "./documents/blog";
-
+import blogNew from "./documents/blogNew";
 import hero from "./objects/hero";
+
 // import about from "./objects/about";
 import features from "./objects/features";
 import testimonial from "./objects/testimonial";
@@ -21,6 +22,7 @@ import stats from "./objects/stats";
 import mobileApp from "./objects/mobileApp";
 import testimonails from "./objects/testimonials";
 import conversion from "./objects/conversion";
+import blogHero from "./objects/blog/blogHero";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -37,10 +39,12 @@ export default createSchema({
     siteConfig,
     home,
     blog,
+    blogNew,
     hero,
     features,
     testimonial,
     blockContent,
+    blogHero,
     benefits,
     stats,
     mobileApp,

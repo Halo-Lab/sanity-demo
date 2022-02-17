@@ -95,6 +95,15 @@ export default () =>
                     .schemaType("siteConfig")
                     .documentId("siteConfig")
                 ),
+              S.listItem()
+                .title("Blog New")
+                .icon(MdSettings)
+                .child(
+                  S.document()
+                    .title("Blog New")
+                    .schemaType("blogNew")
+                    .documentId("blogNew")
+                ),
               currentHomePage,
               currentBlogPage,
             ])

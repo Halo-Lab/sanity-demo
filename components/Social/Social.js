@@ -3,7 +3,6 @@ import styles from "./Social.module.scss";
 import { urlFor } from "../../utils/sanity";
 
 const Social = ({ footerSocialsArr }) => {
-  console.log(footerSocialsArr);
   const socialLinks = footerSocialsArr.map((item, index) => {
     const { socialIcon, socialLink, socialTitle } = item;
 

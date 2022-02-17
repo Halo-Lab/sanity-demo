@@ -1,9 +1,9 @@
 export default {
-  name: "blog",
+  name: "blogNew",
   type: "document",
-  title: "Blog",
+  title: "Blog New",
   initialValue: {
-    slug: "blog",
+    slug: "/",
   },
   fields: [
     {
@@ -12,10 +12,8 @@ export default {
       title: "Title",
     },
     {
-      name: "slug",
-      type: "string",
-      title: "Slug",
-      readOnly: true,
+      name: "blogHero",
+      type: "blogHero",
     },
   ],
 
@@ -25,7 +23,7 @@ export default {
     },
     prepare() {
       return {
-        title: "Blog page",
+        title: "Home page",
       };
     },
   },

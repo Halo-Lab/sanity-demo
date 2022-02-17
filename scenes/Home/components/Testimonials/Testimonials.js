@@ -12,7 +12,7 @@ const Testimonials = ({ data }) => {
   const swiperRef = useRef(null);
 
   const sliderParams = {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 16,
     centeredSlides: true,
     loop: true,
@@ -23,7 +23,7 @@ const Testimonials = ({ data }) => {
     breakpoints: {
       768: {
         loop: false,
-        slidesPerView: 1,
+        slidesPerView: 3,
         centeredSlides: false,
         spaceBetween: 40,
       },

@@ -4,7 +4,7 @@ import { getClient, usePreviewSubscription } from "../../utils/sanity";
 import React from "react";
 import Blog from "../../scenes/Blog/Blog";
 
-const query = groq`*[_type == "blog"][0]`;
+const query = groq`*[_type == "blogNew"][0]`;
 const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 
 const postsQuery = groq`*[_type == "post"]`;
