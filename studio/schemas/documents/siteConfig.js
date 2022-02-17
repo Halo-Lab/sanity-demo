@@ -81,6 +81,11 @@ export default {
       ],
     },
     {
+      title: "Footer logo",
+      name: "footerLogo",
+      type: "image",
+    },
+    {
       name: "footerSocialsArr",
       type: "array",
       title: "Footer list of socials",

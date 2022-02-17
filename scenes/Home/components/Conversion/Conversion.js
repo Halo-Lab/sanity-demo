@@ -53,11 +53,7 @@ const Conversion = ({ data }) => {
                   </div>
                   <img
                     src={urlFor(stickerObj.icon)}
-                    imgStyle={{
-                      objectFit: "contain",
-                      width: "32px",
-                      height: "32px",
-                    }}
+                    className={styles.stickerImg}
                     alt={stickerObj.title}
                   />
                   <span className={styles.conversionReplyText}>

@@ -44,7 +44,11 @@ const Sandwich = ({ buttonLink, buttonText, headerLinkArr }) => {
           </button>
         </div>
         <div className={styles.sandwichMain}>
-          <ButtonPrimary buttonLink={buttonLink} buttonText={buttonText} />
+          <ButtonPrimary
+            buttonLink={buttonLink.current}
+            mod="button--second-type"
+            buttonText={buttonText}
+          />
           <Navigation headerLinkArr={headerLinkArr} />
         </div>
       </div>

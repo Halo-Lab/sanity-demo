@@ -14,15 +14,35 @@ dl,
 dd {
   margin: 0;
 }
+.layout {
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
 
 img {
+  max-width: 100%;
+  display: block;
   width: 100%;
   height: auto;
 }
-
-main {
-  padding: 0 64px;
+button {
+  transition: 0.2s;
 }
+
+// main {
+//   padding: 0 64px;
+// }
 
 .card {
   max-width: 400px;

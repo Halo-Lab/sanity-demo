@@ -10,7 +10,7 @@ import Conversion from "./components/Conversion/Conversion";
 
 const Home = ({ data }) => {
   return (
-    <div className={s.container}>
+    <div className="homepage">
       <Hero data={data} />
       <Partners data={data} />
       <Benefits data={data} />

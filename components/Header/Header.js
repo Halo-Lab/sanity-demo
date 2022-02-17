@@ -8,7 +8,6 @@ import Sandwich from "./Sandwich/Sandwich";
 const Header = ({ LayoutData }) => {
   const { headerLinkArr, logo, buttonObj } = LayoutData;
   const { buttonLink, buttonText } = buttonObj;
-  console.log(headerLinkArr);
   return (
     <header className={styles.header}>
       <div className="container">
@@ -20,11 +19,15 @@ const Header = ({ LayoutData }) => {
           </Link>
           <div className={styles.headerRight}>
             <Navigation headerLinkArr={headerLinkArr} />
-            <ButtonPrimary buttonLink={buttonLink} buttonText={buttonText} />
+            <ButtonPrimary
+              buttonLink={buttonLink}
+              mod="button--second-type"
+              buttonText={buttonText}
+            />
           </div>
           <Sandwich
             headerLinkArr={headerLinkArr}
-            buttonLink={buttonLink}
+            buttonLink={buttonLink.current}
             buttonText={buttonText}
           />
         </div>

@@ -24,10 +24,6 @@ export default {
       type: "hero",
     },
     {
-      name: "about",
-      type: "about",
-    },
-    {
       name: "partners",
       type: "partners",
     },

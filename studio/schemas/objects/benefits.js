@@ -11,6 +11,16 @@ export default {
       title: "Benefit General title",
     },
     {
+      name: "buttonShowText",
+      type: "string",
+      title: "Benefit Button Show",
+    },
+    {
+      name: "buttonHiddenText",
+      type: "string",
+      title: "Benefit Button Hide",
+    },
+    {
       name: "benefitCategory",
       type: "text",
       title: "Benefit category",

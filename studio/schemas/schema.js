@@ -38,7 +38,6 @@ export default createSchema({
     home,
     blog,
     hero,
-    about,
     features,
     testimonial,
     blockContent,

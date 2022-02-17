@@ -4,7 +4,7 @@
     align-items: center;
     gap: 30px;
     /// Временное решение спейс-ароунд, т.к. надо переделать внешний блок
-    justify-content: space-around;
+    // justify-content: space-around;
 
     @media screen and (max-width: 768px) {
       flex-direction: column-reverse;

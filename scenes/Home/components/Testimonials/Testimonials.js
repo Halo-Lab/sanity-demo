@@ -11,34 +11,32 @@ import SecondArrowIcon from "../../../../assets/SecondArrowIcon/SecondArrowIcon"
 const Testimonials = ({ data }) => {
   const swiperRef = useRef(null);
 
-  // const sliderParams = {
-  //   slidesPerView: "auto",
-  //   spaceBetween: 16,
-  //   centeredSlides: true,
-  //   loop: true,
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  //   breakpoints: {
-  //     768: {
-  //       centeredSlides: false,
-  //       spaceBetween: 40,
-  //       loop: false,
-  //     },
-  //   },
-  // };
+  const sliderParams = {
+    slidesPerView: 3,
+    spaceBetween: 16,
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        loop: false,
+        slidesPerView: 1,
+        centeredSlides: false,
+        spaceBetween: 40,
+      },
+    },
+  };
 
   const goNext = () => {
-    console.log("next");
-
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   };
 
   const goPrev = () => {
-    console.log("prev");
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
@@ -87,19 +85,13 @@ const Testimonials = ({ data }) => {
           </div>
           <div className={s.testimonialSlider}>
             <Swiper
-              slidesPerView={2}
-              spaceBetween={16}
-              centeredSlides={true}
-              loop={true}
-              // breakpoints: {
-              //   768: {
-              //     centeredSlides: false,
-              //     spaceBetween: 40,
-              //     loop: false,
-              //   },
-              // }
-              ref={swiperRef}
-              containerClass={s.testimonialSliderContainer}
+              {...sliderParams}
+              // slidesPerView={2}
+              // spaceBetween={2}
+              // centeredSlides={true}
+              // loop={true}
+              // ref={swiperRef}
+              // containerClass={s.testimonialSliderContainer}
             >
               {testimonialItems}
             </Swiper>
