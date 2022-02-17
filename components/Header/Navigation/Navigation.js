@@ -9,7 +9,7 @@ const renderMenu = (items) => {
 
     return (
       <li key={index}>
-        <Link href={navLink}>
+        <Link href={`/` + navLink.current}>
           <a className={styles.menuLink}>{navName}</a>
         </Link>
       </li>

@@ -1,9 +1,11 @@
 import { groq } from "next-sanity";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
-import Posts from "../../components/Posts";
+// import Posts from "../../components/Posts";
 import React from "react";
+import Blog from "../../scenes/Blog/Blog";
 
 const query = groq`*[_type == "blog"][0]`;
+const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 
 const postsQuery = groq`*[_type == "post"]`;
 
@@ -25,9 +27,7 @@ function BlogPage(props) {
   return (
     <div>
       <h1>{title}</h1>
-      <div>
-        <Posts posts={prod} />
-      </div>
+      <Blog data={data} />
     </div>
   );
 }
@@ -35,12 +35,14 @@ function BlogPage(props) {
 export async function getStaticProps({ params = {}, preview = false }) {
   const blogData = await getClient(preview).fetch(query);
   const postData = await getClient(preview).fetch(postsQuery);
+  const LayoutData = await getClient(preview).fetch(querySiteConfig);
 
   return {
     props: {
       preview,
       blogData,
       postData,
+      LayoutData,
     },
   };
 }

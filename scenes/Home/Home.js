@@ -1,5 +1,3 @@
-import s from "./Home.module.scss";
-import { urlFor } from "../../utils/sanity";
 import Hero from "./components/Hero/Hero";
 import Partners from "./components/Partners/Partners";
 import Benefits from "./components/Benefits/Benefits";

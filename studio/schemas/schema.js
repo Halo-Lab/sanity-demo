@@ -10,7 +10,7 @@ import home from "./documents/home";
 import blog from "./documents/blog";
 
 import hero from "./objects/hero";
-import about from "./objects/about";
+// import about from "./objects/about";
 import features from "./objects/features";
 import testimonial from "./objects/testimonial";
 import blockContent from "./objects/blockContent";
