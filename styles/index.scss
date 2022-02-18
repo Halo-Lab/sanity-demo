@@ -40,10 +40,6 @@ button {
   transition: 0.2s;
 }
 
-// main {
-//   padding: 0 64px;
-// }
-
 .card {
   max-width: 400px;
   display: block;
@@ -606,5 +602,63 @@ button {
 
   &--padding-right {
     padding: 20px 64px 20px 24px;
+  }
+}
+
+.postPage {
+  padding-bottom: 50px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid;
+    opacity: 0.2;
+    border: 1px solid #4b4a5b;
+  }
+
+  div {
+    width: 100%;
+
+    img {
+      width: 100%;
+      padding-bottom: 10px;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 160%;
+    color: #21334f;
+    opacity: 0.8;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    margin: 0 0 35px 0;
+    padding-left: 15px;
+  }
+
+  ol {
+    margin: 0 0 35px 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+  h1 {
+    font-size: 44px;
+    font-style: normal;
+    color: #21334f;
+    font-weight: 700;
+    line-height: 53px;
+    letter-spacing: 0;
+    margin-bottom: 30px;
   }
 }

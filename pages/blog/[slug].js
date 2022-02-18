@@ -5,9 +5,10 @@ import Post from "../../scenes/Post/Post";
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]`;
 const queryBlog = groq`*[_type == "blogNew"][0]`;
+const postsQuery = groq`*[_type == "post"]`;
 const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 
-function PostPage({ postData, blogData, preview }) {
+function PostPage({ postData, blogData, allPostData, preview }) {
   const { data: post = {} } = usePreviewSubscription(query, {
     params: { slug: postData?.slug?.current },
     initialData: postData,
@@ -18,10 +19,14 @@ function PostPage({ postData, blogData, preview }) {
     initialData: blogData ?? "",
     enabled: true,
   });
+  const { data: prod } = usePreviewSubscription(postsQuery, {
+    initialData: allPostData,
+    enabled: true,
+  });
 
   return (
     <div>
-      <Post post={post} data={data} />
+      <Post post={post} data={data} allPostData={allPostData} />
     </div>
   );
 }
@@ -31,11 +36,12 @@ export async function getStaticProps({ params, preview = false }) {
     slug: params.slug,
   });
 
+  const allPostData = await getClient(preview).fetch(postsQuery);
   const blogData = await getClient(preview).fetch(queryBlog);
   const LayoutData = await getClient(preview).fetch(querySiteConfig);
 
   return {
-    props: { preview, postData, LayoutData, blogData },
+    props: { preview, postData, LayoutData, blogData, allPostData },
   };
 }
 
