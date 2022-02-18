@@ -11,18 +11,16 @@ const renderPosts = (postData) => {
   return postsList;
 };
 
-const LatestPosts = ({ data, postData }) => {
+const LatestPosts = ({ postData, recommended, pageType }) => {
   return (
     <div className={styles.posts}>
       <div className="container">
-        {/* {pageType && (
+        {pageType && (
           <div className={styles.recommend_head}>
-            <p className="section-category">
-              {'category name'}
-            </p>
-            <h2 className="section-title">{'title'}</h2>
+            <p className="section-category">{recommended.recCategory}</p>
+            <h2 className="section-title">{recommended.recTitle}</h2>
           </div>
-        )} */}
+        )}
         <div className={styles.postsInner}>{renderPosts(postData)}</div>
       </div>
     </div>

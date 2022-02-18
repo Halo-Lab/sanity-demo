@@ -52,12 +52,12 @@ const Conversion = ({ data }) => {
                     <ReplyIcon />
                   </div>
                   <img
-                    src={urlFor(stickerObj.icon)}
+                    src={urlFor(stickerObj.stickerIcon)}
                     className={styles.stickerImg}
-                    alt={stickerObj.title}
+                    alt={stickerObj.stickerTitle}
                   />
                   <span className={styles.conversionReplyText}>
-                    {stickerObj.title}
+                    {stickerObj.stickerTitle}
                   </span>
                 </div>
                 <img

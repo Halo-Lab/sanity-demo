@@ -10,7 +10,7 @@ import home from "./documents/home";
 import blog from "./documents/blog";
 import blogNew from "./documents/blogNew";
 import hero from "./objects/hero";
-
+import recommended from "./objects/recommended";
 // import about from "./objects/about";
 import features from "./objects/features";
 import testimonial from "./objects/testimonial";
@@ -47,6 +47,7 @@ export default createSchema({
     blogHero,
     benefits,
     stats,
+    recommended,
     mobileApp,
     testimonails,
     conversion,

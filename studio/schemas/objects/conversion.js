@@ -37,12 +37,12 @@ export default {
       title: "Conversion Sticker",
       fields: [
         {
-          name: "title",
+          name: "stickerTitle",
           type: "string",
           title: "Stiker title",
         },
         {
-          name: "icon",
+          name: "stickerIcon",
           type: "image",
           title: "Stiker icon",
         },

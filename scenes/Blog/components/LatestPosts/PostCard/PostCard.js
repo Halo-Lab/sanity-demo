@@ -5,7 +5,6 @@ import { urlFor } from "../../../../../utils/sanity";
 
 const PostCard = ({ post }) => {
   const { mainImage, title, subtitle, slug } = post;
-  console.log(slug.current);
 
   const cutDescription = (text) => {
     if (text) {

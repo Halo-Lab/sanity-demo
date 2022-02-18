@@ -15,6 +15,14 @@ export default {
       name: "blogHero",
       type: "blogHero",
     },
+    {
+      name: "conversion",
+      type: "conversion",
+    },
+    {
+      name: "recommended",
+      type: "recommended",
+    },
   ],
 
   preview: {
