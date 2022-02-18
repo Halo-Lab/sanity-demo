@@ -22,12 +22,9 @@ function BlogPage(props) {
     enabled: true,
   });
 
-  const { title } = data;
-
   return (
     <div>
-      <h1>{title}</h1>
-      <Blog data={data} />
+      <Blog data={data} postData={postData} />
     </div>
   );
 }
@@ -37,6 +34,7 @@ export async function getStaticProps({ params = {}, preview = false }) {
   const postData = await getClient(preview).fetch(postsQuery);
   const LayoutData = await getClient(preview).fetch(querySiteConfig);
 
+  console.log(postData);
   return {
     props: {
       preview,

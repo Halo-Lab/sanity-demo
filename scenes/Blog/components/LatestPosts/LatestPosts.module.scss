@@ -1,0 +1,30 @@
+.posts {
+  padding: 0 0 50px;
+  @media screen and (max-width: 768px) {
+    padding: 0 0 130px;
+  }
+
+  &Inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 70px 40px;
+    grid-auto-flow: row;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 30px;
+    }
+
+    @media screen and (min-width: 578px) and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 30px;
+    }
+  }
+}
+
+.recommend_head {
+  margin-bottom: 70px;
+}
