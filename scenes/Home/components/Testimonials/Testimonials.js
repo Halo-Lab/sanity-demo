@@ -3,8 +3,11 @@ import React, { useRef } from "react";
 import s from "./Testimonials.module.scss";
 import TestimonialsItem from "./TestimonialsItem/TestimonialsItem";
 import classnames from "classnames";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
 import "swiper/css";
+SwiperCore.use([Navigation]);
 
 import SecondArrowIcon from "../../../../assets/SecondArrowIcon/SecondArrowIcon";
 
@@ -16,6 +19,7 @@ const Testimonials = ({ data }) => {
     spaceBetween: 16,
     centeredSlides: true,
     loop: true,
+    // ref = swiperRef,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -67,7 +71,10 @@ const Testimonials = ({ data }) => {
               <button
                 type="button"
                 onClick={goPrev}
-                className={s.testimonialNavigationButton}
+                className={classnames(
+                  s.testimonialNavigationButton,
+                  "swiper-button-prev"
+                )}
               >
                 <SecondArrowIcon mod="icon--navigate" />
               </button>
@@ -76,7 +83,8 @@ const Testimonials = ({ data }) => {
                 onClick={goNext}
                 className={classnames(
                   s.testimonialNavigationButton,
-                  s.testimonialNavigationButtonNext
+                  s.testimonialNavigationButtonNext,
+                  "swiper-button-next"
                 )}
               >
                 <SecondArrowIcon mod="icon--navigate" />
@@ -85,13 +93,11 @@ const Testimonials = ({ data }) => {
           </div>
           <div className={s.testimonialSlider}>
             <Swiper
+              // modules={[Navigation]}
               {...sliderParams}
-              // slidesPerView={2}
-              // spaceBetween={2}
-              // centeredSlides={true}
-              // loop={true}
+              // navigation
               // ref={swiperRef}
-              // containerClass={s.testimonialSliderContainer}
+              containerClass={s.testimonialSliderContainer}
             >
               {testimonialItems}
             </Swiper>
