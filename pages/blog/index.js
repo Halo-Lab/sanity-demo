@@ -34,7 +34,6 @@ export async function getStaticProps({ params = {}, preview = false }) {
   const postData = await getClient(preview).fetch(postsQuery);
   const LayoutData = await getClient(preview).fetch(querySiteConfig);
 
-  console.log(postData);
   return {
     props: {
       preview,

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./BlogHero.module.scss";
 import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPrimary";
-import ArrowIcon from "../../../../assets/ArrowIcon";
+import ArrowIcon from "../../../../assets/ArrowIcon/ArrowIcon";
 import { urlFor } from "../../../../utils/sanity";
 const BlogHero = ({ data }) => {
   const { description, mainImage, title, buttonObj } = data.blogHero;

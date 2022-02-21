@@ -1,7 +1,7 @@
 import styles from "./Conversion.module.scss";
 import { urlFor } from "../../../../utils/sanity";
 import classNames from "classnames";
-import ArrowIcon from "../../../../assets/ArrowIcon";
+import ArrowIcon from "../../../../assets/ArrowIcon/ArrowIcon";
 import ReplyIcon from "../../../../assets/ReplyIcon/ReplyIcon";
 import ButtonSend from "../../../../components/Buttons/ButtonSend/ButtonSend";
 
@@ -15,7 +15,6 @@ const Conversion = ({ data }) => {
     mainImage,
     stickerObj,
   } = conversion;
-  // const {icon, title } = stickerObj
 
   return (
     <div className="section section--conversion">

@@ -1,7 +1,12 @@
 import s from "./ButtonPrimary.module.scss";
 import classnames from "classnames";
 
-const ButtonPrimary = ({ buttonLink, buttonText, mod, Icon }) => {
+const ButtonPrimary = ({
+  buttonLink = "https://www.halo-lab.com/",
+  buttonText,
+  mod,
+  Icon,
+}) => {
   return (
     <a
       href={buttonLink}

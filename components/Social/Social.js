@@ -10,8 +10,8 @@ const Social = ({ footerSocialsArr }) => {
       <li className={styles.socialItem} key={index}>
         <a href={socialLink.current}>
           <img
+            className={styles.socialIcon}
             loading="lazy"
-            style={{ width: 24 }}
             src={urlFor(socialIcon)}
             alt={socialTitle}
           />

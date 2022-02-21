@@ -632,6 +632,9 @@ button {
     color: #21334f;
     opacity: 0.8;
     margin-bottom: 35px;
+    strong {
+      color: red;
+    }
   }
 
   h2 {
@@ -664,4 +667,8 @@ button {
 }
 .swiper-pagination-bullet-active {
   --swiper-theme-color: #21334f !important;
+}
+
+.logo {
+  width: 192px;
 }

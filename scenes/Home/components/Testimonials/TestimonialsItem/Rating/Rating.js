@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 
 import styles from "./Rating.module.scss";
-import StarIcon from "../../../../../../assets/StarIcon";
+import StarIcon from "../../../../../../assets/StarIcon/StarIcon";
 
 const Rating = ({ starsNum }) => {
   const stars = [

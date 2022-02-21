@@ -40,7 +40,7 @@ const Sandwich = ({ buttonLink, buttonText, headerLinkArr }) => {
             className={styles.sandwichClose}
             type="button"
           >
-            {/* <CloseIcon /> */}X
+            X
           </button>
         </div>
         <div className={styles.sandwichMain}>

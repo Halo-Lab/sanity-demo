@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./StatsItem.module.scss";
-import { urlFor } from "../../../../../utils/sanity";
 
 const StatsItem = ({ data }) => {
   const { statTitle, statNumber } = data;

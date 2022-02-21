@@ -35,10 +35,6 @@ const recommendedPost = (posts, pageType) => {
   const sliderParams = {
     slidesPerView: 1,
     centeredSlides: true,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   type: "bullets",
-    // },
   };
 
   if (pageType == "recommended") {
