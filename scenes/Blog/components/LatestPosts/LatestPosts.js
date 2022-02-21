@@ -1,7 +1,13 @@
 import React from "react";
-
 import styles from "./LatestPosts.module.scss";
 import PostCard from "./PostCard/PostCard";
+import { useMediaQuery } from "react-responsive";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+
+SwiperCore.use([Pagination]);
 
 const renderPosts = (postData) => {
   const postsList = postData.map((item, index) => {
@@ -11,9 +17,43 @@ const renderPosts = (postData) => {
   return postsList;
 };
 
+const renderSwiperPosts = (postData) => {
+  const postsList = postData.map((item, index) => {
+    return (
+      <SwiperSlide>
+        <PostCard key={index} post={item} />
+      </SwiperSlide>
+    );
+  });
+
+  return postsList;
+};
+
 const recommendedPost = (posts, pageType) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 754px)" });
+
+  const sliderParams = {
+    slidesPerView: 1,
+    centeredSlides: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   type: "bullets",
+    // },
+  };
+
   if (pageType == "recommended") {
     const recPosts = posts.slice(0, 3);
+    if (isMobile) {
+      return (
+        <Swiper
+          {...sliderParams}
+          pagination={{ clickable: true }}
+          className={styles.postsSlider}
+        >
+          {renderSwiperPosts(recPosts)}
+        </Swiper>
+      );
+    }
     return renderPosts(recPosts);
   }
   return renderPosts(posts);

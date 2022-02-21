@@ -1,4 +1,9 @@
 .posts {
+  &Slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
   padding: 0 0 50px;
   @media screen and (max-width: 768px) {
     padding: 0 0 130px;
