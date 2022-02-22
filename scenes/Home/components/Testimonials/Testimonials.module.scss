@@ -66,6 +66,9 @@
       }
     }
   }
+  .title {
+    margin-bottom: 2rem;
+  }
 
   &Navigation {
     display: flex;
@@ -76,9 +79,10 @@
 
     @media screen and (max-width: 768px) {
       position: absolute;
-      bottom: 0;
+      bottom: 2%;
       left: 50%;
       transform: translateX(-50%);
+      padding: 0;
     }
 
     &Button {

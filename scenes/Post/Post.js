@@ -29,9 +29,9 @@ const Post = ({ post, data, allPostData }) => {
           recommended={recommended}
           pageType={"recommended"}
         />
-        <div className={styles.postFormWrap}>
-          <Conversion data={data} />
-        </div>
+      </div>
+      <div className={styles.postFormWrap}>
+        <Conversion data={data} />
       </div>
     </>
   );

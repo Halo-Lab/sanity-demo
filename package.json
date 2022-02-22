@@ -15,12 +15,12 @@
     "url": ""
   },
   "dependencies": {
+    "@sanity/base": "^2.27.0",
     "@sanity/block-content-to-react": "^2.0.7",
-    "@sanity/client": "^2.13.0",
+    "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^0.140.22",
-    "breakpoints-js": "^1.0.6",
     "classnames": "^2.3.1",
-    "next": "^12.0.10",
+    "next": "^12.1.0",
     "next-sanity": "^0.3.0",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
@@ -30,8 +30,7 @@
     "react-responsive": "^9.0.0-beta.6",
     "sanity": "^2.20.0",
     "sass": "^1.35.2",
-    "swiper": "^8.0.6",
-    "use-media": "^1.4.0"
+    "swiper": "^8.0.6"
   },
   "devDependencies": {
     "@sanity/cli": "^2.26.0",

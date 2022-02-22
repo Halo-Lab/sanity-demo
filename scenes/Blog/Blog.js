@@ -4,7 +4,7 @@ import Conversion from "../Home/components/Conversion/Conversion";
 
 const Blog = ({ data, postData }) => {
   return (
-    <div className="blogpage">
+    <div>
       <BlogHero data={data} />
       <LatestPosts data={data} postData={postData} />
       <Conversion data={data} />

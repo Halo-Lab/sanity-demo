@@ -6,7 +6,7 @@
   }
   padding: 0 0 50px;
   @media screen and (max-width: 768px) {
-    padding: 0 0 130px;
+    // padding: 0 0 75px;
   }
 
   &Inner {
@@ -15,6 +15,7 @@
     grid-template-rows: auto;
     gap: 70px 40px;
     grid-auto-flow: row;
+    min-height: 490px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -32,4 +33,7 @@
 
 .recommend_head {
   margin-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+  }
 }

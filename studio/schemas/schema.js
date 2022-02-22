@@ -11,9 +11,7 @@ import blog from "./documents/blog";
 import blogNew from "./documents/blogNew";
 import hero from "./objects/hero";
 import recommended from "./objects/recommended";
-// import about from "./objects/about";
 import features from "./objects/features";
-import testimonial from "./objects/testimonial";
 import blockContent from "./objects/blockContent";
 import partners from "./objects/partners";
 import siteConfig from "./documents/siteConfig";
@@ -42,7 +40,6 @@ export default createSchema({
     blogNew,
     hero,
     features,
-    testimonial,
     blockContent,
     blogHero,
     benefits,

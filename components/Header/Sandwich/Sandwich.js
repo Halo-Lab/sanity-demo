@@ -6,7 +6,6 @@ import Navigation from "../Navigation/Navigation";
 import ButtonPrimary from "../../Buttons/ButtonPrimary/ButtonPrimary";
 import SandwichIcon from "../../../assets/SandwichIcon/SandwichIcon";
 import CloseIcon from "../../../assets/CloseIcon/CloseIcon";
-
 const Sandwich = ({ buttonLink, buttonText, headerLinkArr }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -40,7 +39,7 @@ const Sandwich = ({ buttonLink, buttonText, headerLinkArr }) => {
             className={styles.sandwichClose}
             type="button"
           >
-            X
+            <CloseIcon />
           </button>
         </div>
         <div className={styles.sandwichMain}>
@@ -49,7 +48,9 @@ const Sandwich = ({ buttonLink, buttonText, headerLinkArr }) => {
             mod="button--second-type"
             buttonText={buttonText}
           />
-          <Navigation headerLinkArr={headerLinkArr} />
+          <div onClick={handleSandwichClick}>
+            <Navigation headerLinkArr={headerLinkArr} />
+          </div>
         </div>
       </div>
     </div>

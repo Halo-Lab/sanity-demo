@@ -35,6 +35,7 @@ const recommendedPost = (posts, pageType) => {
   const sliderParams = {
     slidesPerView: 1,
     centeredSlides: true,
+    spaceBetween: 16,
   };
 
   if (pageType == "recommended") {

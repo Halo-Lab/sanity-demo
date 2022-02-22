@@ -51,7 +51,7 @@ const Testimonials = ({ data }) => {
   const testimonialItems = testimonialsArr.map((item, index) => {
     return (
       <SwiperSlide>
-        <TestimonialsItem data={item} key={index} />;
+        <TestimonialsItem data={item} key={index} />
       </SwiperSlide>
     );
   });
@@ -61,10 +61,15 @@ const Testimonials = ({ data }) => {
       <div className={s.testimonial}>
         <div className={s.testimonialWrapper}>
           <div className={s.testimonialInfo}>
-            <span className="s-category section-category--inner section-title--center-mobile">
+            <span className="section-category section-category--inner section-title--center-mobile">
               {category}
             </span>
-            <h3 className="section-title section-title--inner section-title--center-mobile">
+            <h3
+              className={classnames(
+                "section-title section-title--inner section-title--center-mobile",
+                s.title
+              )}
+            >
               {title}
             </h3>
             <div className={s.testimonialNavigation}>
