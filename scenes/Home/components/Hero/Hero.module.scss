@@ -3,8 +3,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    /// Временное решение спейс-ароунд, т.к. надо переделать внешний блок
-    // justify-content: space-around;
+    justify-content: space-around;
 
     @media screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -81,6 +80,7 @@
     width: 100%;
     padding: 19px 26px 0 14px;
     height: 213px;
+    margin-bottom: 7%;
   }
 
   &::before {

@@ -37,3 +37,15 @@
     margin-bottom: 16px;
   }
 }
+
+.postsInner {
+  div {
+    :global(.swiper-pagination-bullet-active) {
+      --swiper-theme-color: #21334f;
+    }
+
+    :global(.swiper-pagination) {
+      bottom: -5px;
+    }
+  }
+}

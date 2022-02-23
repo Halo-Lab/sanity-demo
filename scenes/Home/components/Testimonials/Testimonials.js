@@ -18,6 +18,8 @@ const Testimonials = ({ data }) => {
     slidesPerView: 1,
     spaceBetween: 16,
     centeredSlides: true,
+    centerInsufficientSlides: true,
+    centeredSlidesBounds: true,
     loop: true,
     // ref = swiperRef,
     navigation: {
@@ -27,9 +29,12 @@ const Testimonials = ({ data }) => {
     breakpoints: {
       768: {
         loop: false,
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      1280: {
         slidesPerView: 3,
         centeredSlides: false,
-        spaceBetween: 40,
       },
     },
   };

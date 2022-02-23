@@ -46,33 +46,33 @@ const currentHomePage = S.listItem()
   });
 
 // Extract our Blog page
-const currentBlogPage = S.listItem()
-  .title("Blog Page")
-  .icon(FiBook)
-  .child(async () => {
-    const data = await sanityClient.fetch(`
-  *[_type == "blog"][0]`);
+// const currentBlogPage = S.listItem()
+//   .title("Blog Page")
+//   .icon(FiBook)
+//   .child(async () => {
+//     const data = await sanityClient.fetch(`
+//   *[_type == "blog"][0]`);
 
-    if (!data)
-      return S.component(() => (
-        <Card padding={4}>
-          <Card padding={[3, 3, 4]} radius={2} shadow={1} tone="critical">
-            <Text align="center" size={[2]}>
-              The Home Page has not been set. Visit the Settings page to
-              activate.
-            </Text>
-          </Card>
-        </Card>
-      )).title("Blog Page");
+//     if (!data)
+//       return S.component(() => (
+//         <Card padding={4}>
+//           <Card padding={[3, 3, 4]} radius={2} shadow={1} tone="critical">
+//             <Text align="center" size={[2]}>
+//               The Home Page has not been set. Visit the Settings page to
+//               activate.
+//             </Text>
+//           </Card>
+//         </Card>
+//       )).title("Blog Page");
 
-    return S.document()
-      .id(data._id)
-      .schemaType("blog")
-      .views([
-        S.view.form(),
-        S.view.component(PagePreview).title("Page Preview"),
-      ]);
-  });
+//     return S.document()
+//       .id(data._id)
+//       .schemaType("blog")
+//       .views([
+//         S.view.form(),
+//         S.view.component(PagePreview).title("Page Preview"),
+//       ]);
+//   });
 
 export default () =>
   S.list()
@@ -100,12 +100,12 @@ export default () =>
                 .icon(MdSettings)
                 .child(
                   S.document()
-                    .title("Blog New")
+                    .title("Blog")
                     .schemaType("blogNew")
                     .documentId("blogNew")
                 ),
               currentHomePage,
-              currentBlogPage,
+              // currentBlogPage,
             ])
         ),
       // ...S.documentTypeListItems().filter(hiddenDocTypes),

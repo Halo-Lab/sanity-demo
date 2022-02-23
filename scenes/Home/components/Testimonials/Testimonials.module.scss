@@ -93,6 +93,10 @@
       height: 56px;
       border-radius: 50%;
       border: 1px solid rgba(33, 51, 79, 0.2);
+      @media screen and (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+      }
 
       &Next {
         transform: rotate(180deg);

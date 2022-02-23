@@ -412,6 +412,11 @@ button {
     svg {
       width: 24px;
       height: 24px;
+
+      @media screen and (max-width: 575px) {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
@@ -662,13 +667,6 @@ button {
     line-height: 160%;
     font-weight: bold;
   }
-}
-.swiper-pagination-bullet-active {
-  --swiper-theme-color: #21334f !important;
-}
-
-.swiper-pagination {
-  bottom: -5px !important;
 }
 
 .logo {
