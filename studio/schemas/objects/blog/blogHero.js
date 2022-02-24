@@ -44,7 +44,7 @@ export default {
         {
           name: "buttonLink",
           type: "slug",
-          title: "Button icon",
+          title: "Button Link",
         },
       ],
     },

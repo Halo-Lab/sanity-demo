@@ -9,7 +9,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      padding: 0 24px 88px 24px;
+      padding: 0 0px 88px 0px;
       flex-direction: column;
     }
   }
@@ -101,6 +101,18 @@
       &Next {
         transform: rotate(180deg);
       }
+    }
+  }
+}
+
+.testimonialSlider {
+  :global(.swiper-slide-active) {
+    // margin: 0 auto;
+  }
+  :global(.swiper-slide) {
+    width: 376px !important;
+    @media screen and (max-width: 768px) {
+      width: 312px !important;
     }
   }
 }

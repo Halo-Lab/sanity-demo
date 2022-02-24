@@ -96,8 +96,8 @@ export default () =>
                     .documentId("siteConfig")
                 ),
               S.listItem()
-                .title("Blog New")
-                .icon(MdSettings)
+                .title("Blog")
+                .icon(FiBook)
                 .child(
                   S.document()
                     .title("Blog")

@@ -6,6 +6,7 @@ import { urlFor } from "../../../../utils/sanity";
 const BlogHero = ({ data }) => {
   const { description, mainImage, title, buttonObj } = data.blogHero;
   const { buttonLink, buttonTitle } = buttonObj;
+  console.log(buttonLink);
   return (
     <div className="hero">
       <div className="container">
@@ -14,7 +15,7 @@ const BlogHero = ({ data }) => {
             <h1 className={styles.heroTitle}>{title}</h1>
             <p className={styles.heroSubtitle}>{description}</p>
             <ButtonPrimary
-              buttonLink={buttonLink}
+              buttonLink={buttonLink.current}
               buttonText={buttonTitle}
               mod="button--regular"
               Icon={ArrowIcon}

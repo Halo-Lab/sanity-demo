@@ -1,7 +1,7 @@
 export default {
   name: "blogNew",
   type: "document",
-  title: "Blog New",
+  title: "Blog",
   initialValue: {
     slug: "/",
   },
