@@ -15,27 +15,23 @@ const Testimonials = ({ data }) => {
   const swiperRef = useRef(null);
 
   const sliderParams = {
-    slidesPerView: 1,
+    slidesPerView: "auto",
     spaceBetween: 16,
     centeredSlides: true,
-    // centerInsufficientSlides: true,
-    // centeredSlidesBounds: true,
     loop: true,
-    // ref = swiperRef,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       768: {
-        loop: false,
-        slidesPerView: 2,
-        spaceBetween: 24,
+        loop: true,
+        spaceBetween: 40,
+        centeredSlides: false,
       },
       1280: {
-        slidesPerView: 3,
         spaceBetween: 40,
-        centeredSlides: true,
+        centeredSlides: false,
       },
     },
   };
@@ -103,15 +99,17 @@ const Testimonials = ({ data }) => {
             </div>
           </div>
           <div className={s.testimonialSlider}>
-            <Swiper
-              // modules={[Navigation]}
-              {...sliderParams}
-              // navigation
-              // ref={swiperRef}
-              containerClass={s.testimonialSliderContainer}
-            >
-              {testimonialItems}
-            </Swiper>
+            <div className={s.sliderWrapper}>
+              <Swiper
+                // modules={[Navigation]}
+                {...sliderParams}
+                // navigation
+                // ref={swiperRef}
+                containerClass={s.testimonialSliderContainer}
+              >
+                {testimonialItems}
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>
