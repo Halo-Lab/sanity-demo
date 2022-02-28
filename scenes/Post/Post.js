@@ -8,7 +8,7 @@ const Post = ({ post, data, allPostData }) => {
   const { mainImage, text } = post;
   const { recommended } = data;
   return (
-    <>
+    <div className={styles.wrapper}>
       <div
         className={styles.postPreview}
         style={{
@@ -33,7 +33,7 @@ const Post = ({ post, data, allPostData }) => {
       <div className={styles.postFormWrap}>
         <Conversion data={data} />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,13 +5,13 @@ div .testimonialItem {
   height: 100%;
   padding: 32px;
   background: #ffffff;
-  box-shadow: 0px 0px 60px rgba(55, 36, 8, 0.08);
+  box-shadow: 0px 0px 20px rgba(55, 36, 8, 0.08);
   border-radius: 20px;
 
   @media screen and (max-width: 768px) {
     width: 312px;
     padding: 24px;
-    box-shadow: 0px 0px 40px rgba(55, 36, 8, 0.08);
+    box-shadow: 0px 0px 20px rgba(55, 36, 8, 0.08);
   }
 
   &Desc {
