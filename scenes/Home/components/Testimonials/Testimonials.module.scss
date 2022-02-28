@@ -107,7 +107,9 @@
 
 .testimonialSlider {
   :global(.swiper-slide-active) {
-    // margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      margin-left: 30px;
+    }
   }
   :global(.swiper-slide) {
     width: 376px !important;

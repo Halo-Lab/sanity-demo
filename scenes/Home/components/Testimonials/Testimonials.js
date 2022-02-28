@@ -17,10 +17,9 @@ const Testimonials = ({ data }) => {
   const sliderParams = {
     slidesPerView: 1,
     spaceBetween: 16,
-    centeredSlides: true,
+    // centeredSlides: true,
     // centerInsufficientSlides: true,
     // centeredSlidesBounds: true,
-    loop: true,
     // ref = swiperRef,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -28,14 +27,15 @@ const Testimonials = ({ data }) => {
     },
     breakpoints: {
       768: {
-        loop: false,
+        // loop: false,
         slidesPerView: 2,
         spaceBetween: 24,
       },
       1280: {
         slidesPerView: 3,
         spaceBetween: 40,
-        centeredSlides: true,
+        // loop: true,
+        // centeredSlides: true,
       },
     },
   };
@@ -105,6 +105,7 @@ const Testimonials = ({ data }) => {
           <div className={s.testimonialSlider}>
             <Swiper
               // modules={[Navigation]}
+              // slidesPerView={1}
               {...sliderParams}
               // navigation
               // ref={swiperRef}
