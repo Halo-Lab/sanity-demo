@@ -17,6 +17,7 @@ const Testimonials = ({ data }) => {
   const sliderParams = {
     spaceBetween: 16,
     slidesPerView: "auto",
+    centeredSlides: true,
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -30,6 +31,8 @@ const Testimonials = ({ data }) => {
       },
       1280: {
         centeredSlides: false,
+        loop: true,
+        spaceBetween: 40,
       },
     },
   };
