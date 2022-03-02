@@ -4,9 +4,10 @@ import BlockContent from "@sanity/block-content-to-react";
 import LatestPosts from "../Blog/components/LatestPosts/LatestPosts";
 import styles from "./Post.module.scss";
 
-const Post = ({ post, data, allPostData }) => {
+const Post = ({ post, data, allPostData, homeData }) => {
   const { mainImage, text } = post;
   const { recommended } = data;
+
   return (
     <div className={styles.wrapper}>
       <div
@@ -31,7 +32,7 @@ const Post = ({ post, data, allPostData }) => {
         />
       </div>
       <div className={styles.postFormWrap}>
-        <Conversion data={data} />
+        <Conversion data={homeData} />
       </div>
     </div>
   );

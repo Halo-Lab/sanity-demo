@@ -20,7 +20,7 @@ const Header = ({ LayoutData }) => {
           <div className={styles.headerRight}>
             <Navigation headerLinkArr={headerLinkArr} />
             <ButtonPrimary
-              buttonLink={buttonLink}
+              buttonLink={buttonLink.current}
               mod="button--second-type"
               buttonText={buttonText}
             />

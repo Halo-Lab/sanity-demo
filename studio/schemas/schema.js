@@ -20,7 +20,6 @@ import stats from "./objects/stats";
 import mobileApp from "./objects/mobileApp";
 import testimonails from "./objects/testimonials";
 import conversion from "./objects/conversion";
-import blogHero from "./objects/blog/blogHero";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -41,7 +40,6 @@ export default createSchema({
     hero,
     features,
     blockContent,
-    blogHero,
     benefits,
     stats,
     recommended,

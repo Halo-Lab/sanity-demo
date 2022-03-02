@@ -5,10 +5,11 @@ import Post from "../../scenes/Post/Post";
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]`;
 const queryBlog = groq`*[_type == "blogNew"][0]`;
+const queryHome = groq`*[_type == "home"][0]`;
 const postsQuery = groq`*[_type == "post"]`;
 const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 
-function PostPage({ postData, blogData, allPostData, preview }) {
+function PostPage({ postData, blogData, allPostData, homeData, preview }) {
   const { data: post = {} } = usePreviewSubscription(query, {
     params: { slug: postData?.slug?.current },
     initialData: postData,
@@ -26,7 +27,12 @@ function PostPage({ postData, blogData, allPostData, preview }) {
 
   return (
     <div>
-      <Post post={post} data={data} allPostData={allPostData} />
+      <Post
+        post={post}
+        data={data}
+        allPostData={allPostData}
+        homeData={homeData}
+      />
     </div>
   );
 }
@@ -39,9 +45,10 @@ export async function getStaticProps({ params, preview = false }) {
   const allPostData = await getClient(preview).fetch(postsQuery);
   const blogData = await getClient(preview).fetch(queryBlog);
   const LayoutData = await getClient(preview).fetch(querySiteConfig);
+  const homeData = await getClient(preview).fetch(queryHome);
 
   return {
-    props: { preview, postData, LayoutData, blogData, allPostData },
+    props: { preview, postData, LayoutData, blogData, allPostData, homeData },
   };
 }
 

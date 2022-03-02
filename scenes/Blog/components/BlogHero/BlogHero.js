@@ -3,20 +3,18 @@ import styles from "./BlogHero.module.scss";
 import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPrimary";
 import ArrowIcon from "../../../../assets/ArrowIcon/ArrowIcon";
 import { urlFor } from "../../../../utils/sanity";
-const BlogHero = ({ data }) => {
-  const { description, mainImage, title, buttonObj } = data.blogHero;
-  const { buttonLink, buttonTitle } = buttonObj;
-  console.log(buttonLink);
+const BlogHero = ({ postData }) => {
+  const { title, subtitle, slug, mainImage } = postData[0];
+
   return (
     <div className="hero">
       <div className="container">
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>{title}</h1>
-            <p className={styles.heroSubtitle}>{description}</p>
+            <p className={styles.heroSubtitle}>{subtitle}</p>
             <ButtonPrimary
-              buttonLink={buttonLink.current}
-              buttonText={buttonTitle}
+              buttonLink={`blog/${slug.current}`}
               mod="button--regular"
               Icon={ArrowIcon}
             />
@@ -25,7 +23,7 @@ const BlogHero = ({ data }) => {
             <img
               className="heroImg"
               src={urlFor(mainImage)}
-              alt={mainImage.alt}
+              alt={(mainImage.alt = "post Image")}
               loading="eager"
             />
           </div>
