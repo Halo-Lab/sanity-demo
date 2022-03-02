@@ -59,11 +59,7 @@ const Conversion = ({ data }) => {
                     {stickerObj.stickerTitle}
                   </span>
                 </div>
-                <img
-                  src={urlFor(mainImage)}
-                  imgStyle={{ objectFit: "contain" }}
-                  alt={"modern woomen"}
-                />
+                <img src={urlFor(mainImage)} alt={"modern woomen"} />
               </div>
             </div>
           </div>

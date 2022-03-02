@@ -53,8 +53,8 @@ const Testimonials = ({ data }) => {
 
   const testimonialItems = testimonialsArr.map((item, index) => {
     return (
-      <SwiperSlide>
-        <TestimonialsItem data={item} key={index} />
+      <SwiperSlide key={index}>
+        <TestimonialsItem data={item} />
       </SwiperSlide>
     );
   });
@@ -106,7 +106,7 @@ const Testimonials = ({ data }) => {
                 {...sliderParams}
                 // navigation
                 // ref={swiperRef}
-                containerClass={s.testimonialSliderContainer}
+                containerсlass={s.testimonialSliderContainer}
               >
                 {testimonialItems}
               </Swiper>
