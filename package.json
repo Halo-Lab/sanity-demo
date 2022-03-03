@@ -15,7 +15,7 @@
     "url": ""
   },
   "dependencies": {
-    "@sanity/base": "^2.27.0",
+    "@sanity/base": "^2.27.2",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^0.140.22",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LatestPosts.module.scss";
 import PostCard from "./PostCard/PostCard";
 import { useMediaQuery } from "react-responsive";
@@ -20,8 +20,8 @@ const renderPosts = (postData) => {
 const renderSwiperPosts = (postData) => {
   const postsList = postData.map((item, index) => {
     return (
-      <SwiperSlide>
-        <PostCard key={index} post={item} />
+      <SwiperSlide key={index}>
+        <PostCard post={item} />
       </SwiperSlide>
     );
   });
@@ -29,9 +29,7 @@ const renderSwiperPosts = (postData) => {
   return postsList;
 };
 
-const recommendedPost = (posts, pageType) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 754px)" });
-
+const recommendedPost = (posts, pageType, isMobile) => {
   const sliderParams = {
     slidesPerView: 1,
     centeredSlides: true,
@@ -57,18 +55,27 @@ const recommendedPost = (posts, pageType) => {
 };
 
 const LatestPosts = ({ postData, recommended = {}, pageType }) => {
-  const { recommendedObj } = recommended;
+  const { recommendedObj = "" } = recommended;
+  const { recCategory = "", recTitle = "" } = recommendedObj;
+
+  const [isMobile, setMobile] = useState(false);
+  const screenWidth = useMediaQuery({ query: "(max-width: 754px)" });
+
+  useEffect(() => {
+    setMobile(screenWidth);
+  }, [screenWidth]);
+
   return (
     <div className={styles.posts}>
       <div className="container">
         {pageType && (
           <div className={styles.recommend_head}>
-            <p className="section-category">{recommendedObj.recCategory}</p>
-            <h2 className="section-title">{recommendedObj.recTitle}</h2>
+            <p className="section-category">{recCategory}</p>
+            <h2 className="section-title">{recTitle}</h2>
           </div>
         )}
         <div className={styles.postsInner}>
-          {recommendedPost(postData, pageType)}
+          {recommendedPost(postData, pageType, isMobile)}
         </div>
       </div>
     </div>
