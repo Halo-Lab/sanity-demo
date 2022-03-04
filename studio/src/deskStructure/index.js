@@ -95,20 +95,10 @@ export default () =>
                     .schemaType("siteConfig")
                     .documentId("siteConfig")
                 ),
-              // S.listItem()
-              //   .title("Blog")
-              //   .icon(FiBook)
-              //   .child(
-              //     S.document()
-              //       .title("Blog")
-              //       .schemaType("blogNew")
-              //       .documentId("blogNew")
-              //   ),
               currentHomePage,
               currentBlogPage,
             ])
         ),
-      // ...S.documentTypeListItems().filter(hiddenDocTypes),
     ]);
 
 export const getDefaultDocumentNode = (props) => {

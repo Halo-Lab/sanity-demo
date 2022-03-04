@@ -20,10 +20,6 @@ function PostPage({ postData, blogData, allPostData, homeData, preview }) {
     initialData: blogData ?? "",
     enabled: true,
   });
-  const { data: prod } = usePreviewSubscription(postsQuery, {
-    initialData: allPostData,
-    enabled: true,
-  });
 
   return (
     <div>
