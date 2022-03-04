@@ -3,13 +3,18 @@ export default {
   type: "document",
   title: "Blog",
   initialValue: {
-    slug: "/",
+    slug: "/blog",
   },
   fields: [
     {
       name: "title",
       type: "string",
       title: "Title",
+    },
+    {
+      name: "slug",
+      type: "string",
+      title: "Slug",
     },
     {
       name: "recommended",
@@ -23,7 +28,7 @@ export default {
     },
     prepare() {
       return {
-        title: "Home page",
+        title: "Blog page",
       };
     },
   },

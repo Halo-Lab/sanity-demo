@@ -15,7 +15,7 @@ export default {
       name: "slug",
       type: "string",
       title: "Slug",
-      readOnly: true,
+      // readOnly: true,
     },
     {
       name: "hero",

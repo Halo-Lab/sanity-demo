@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 SwiperCore.use([Pagination]);
 
 const renderPosts = (postData) => {
-  const postsList = postData.map((item, index) => {
+  const postsList = postData.slice(1).map((item, index) => {
     return <PostCard key={index} post={item} />;
   });
 
@@ -37,7 +37,8 @@ const recommendedPost = (posts, pageType, isMobile) => {
   };
 
   if (pageType == "recommended") {
-    const recPosts = posts.slice(0, 3);
+    const recPosts = posts.slice(0, 4);
+
     if (isMobile) {
       return (
         <Swiper
