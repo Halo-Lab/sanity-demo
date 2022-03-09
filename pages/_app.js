@@ -1,7 +1,8 @@
 import "../styles/index.scss";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
-function MyApp({ Component, pageProps }) {
+
+function MyApp({ Component, pageProps, LayoutData }) {
   return (
     <>
       <Head className="head">

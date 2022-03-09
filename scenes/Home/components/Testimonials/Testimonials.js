@@ -11,7 +11,7 @@ SwiperCore.use([Navigation]);
 
 import SecondArrowIcon from "../../../../assets/SecondArrowIcon/SecondArrowIcon";
 
-const Testimonials = ({ data }) => {
+const Testimonials = ({ testimonials }) => {
   const swiperRef = useRef(null);
 
   const sliderParams = {
@@ -49,7 +49,7 @@ const Testimonials = ({ data }) => {
     }
   };
 
-  const { category, testimonialsArr, title } = data.testimonials;
+  const { category, testimonialsArr, title } = testimonials;
 
   const testimonialItems = testimonialsArr.map((item, index) => {
     return (

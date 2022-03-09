@@ -5,7 +5,7 @@ import Post from "../../scenes/Post/Post";
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]`;
 const queryBlog = groq`*[_type == "blogNew"][0]`;
-const queryHome = groq`*[_type == "home"][0]`;
+const queryHome = groq`*[_type == "home"][0].conversion`;
 const postsQuery = groq`*[_type == "post"]`;
 const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 

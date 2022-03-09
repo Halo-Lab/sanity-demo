@@ -7,6 +7,7 @@ import styles from "./Post.module.scss";
 const Post = ({ post, data, allPostData, homeData }) => {
   const { mainImage, text } = post;
   const { recommended } = data;
+  console.log(homeData);
 
   return (
     <div className={styles.wrapper}>
@@ -32,7 +33,7 @@ const Post = ({ post, data, allPostData, homeData }) => {
         />
       </div>
       <div className={styles.postFormWrap}>
-        <Conversion data={homeData} />
+        <Conversion conversion={homeData} />
       </div>
     </div>
   );

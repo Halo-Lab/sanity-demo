@@ -5,9 +5,8 @@ import React from "react";
 import Blog from "../../scenes/Blog/Blog";
 
 const query = groq`*[_type == "blogNew"][0]`;
-const queryHome = groq`*[_type == "home"][0]`;
+const queryHome = groq`*[_type == "home"][0].conversion`;
 const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
-
 const postsQuery = groq`*[_type == "post"] | order(_createdAt desc)`;
 
 function BlogPage(props) {
@@ -22,7 +21,6 @@ function BlogPage(props) {
     initialData: postData,
     enabled: true,
   });
-
   return (
     <div>
       <Blog data={data} postData={postData} homeData={homeData} />

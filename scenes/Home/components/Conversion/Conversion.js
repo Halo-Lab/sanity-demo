@@ -5,8 +5,7 @@ import ArrowIcon from "../../../../assets/ArrowIcon/ArrowIcon";
 import ReplyIcon from "../../../../assets/ReplyIcon/ReplyIcon";
 import ButtonSend from "../../../../components/Buttons/ButtonSend/ButtonSend";
 
-const Conversion = ({ data }) => {
-  const { conversion } = data;
+const Conversion = ({ conversion }) => {
   const {
     title,
     backgroundImage,

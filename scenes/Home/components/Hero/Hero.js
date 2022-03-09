@@ -3,8 +3,7 @@ import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPr
 import ButtonWithArrow from "../../../../components/Buttons/ButtonWithArrow/ButtonWithArrow";
 import { urlFor } from "../../../../utils/sanity";
 
-const Hero = ({ data }) => {
-  const { hero } = data;
+const Hero = ({ hero }) => {
   const { buttonArrowObj, buttonPrimaryObj } = hero;
 
   return (

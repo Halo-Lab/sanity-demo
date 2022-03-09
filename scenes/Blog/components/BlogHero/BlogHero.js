@@ -4,7 +4,7 @@ import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPr
 import ArrowIcon from "../../../../assets/ArrowIcon/ArrowIcon";
 import { urlFor } from "../../../../utils/sanity";
 const BlogHero = ({ postData }) => {
-  const { title, subtitle, slug, mainImage } = postData[0];
+  const { title, subtitle, slug, mainImage } = postData;
 
   return (
     <div className="hero">

@@ -6,9 +6,9 @@ import styles from "./Blog.module.scss";
 const Blog = ({ data, postData, homeData }) => {
   return (
     <div className={styles.wrapper}>
-      <BlogHero data={data} postData={postData} />
-      <LatestPosts data={data} postData={postData} />
-      <Conversion data={homeData} />
+      <BlogHero postData={postData[0]} />
+      <LatestPosts postData={postData} />
+      <Conversion conversion={homeData} />
     </div>
   );
 };

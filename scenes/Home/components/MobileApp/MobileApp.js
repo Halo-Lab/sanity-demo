@@ -4,7 +4,7 @@ import { urlFor } from "../../../../utils/sanity";
 import MobileAppFunction from "./MobileAppFunction/MobileAppFunction";
 import classnames from "classnames";
 
-const MobileApp = ({ data }) => {
+const MobileApp = ({ mobileApp }) => {
   const {
     buttonText,
     category,
@@ -12,7 +12,7 @@ const MobileApp = ({ data }) => {
     mobileAppImage,
     mobileAppArr,
     title,
-  } = data.mobileApp;
+  } = mobileApp;
   const mobileAppFunctions = mobileAppArr.map((item, index) => {
     return <MobileAppFunction data={item} key={index} />;
   });
