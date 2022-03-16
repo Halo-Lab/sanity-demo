@@ -6,7 +6,6 @@ import Blog from "../../scenes/Blog/Blog";
 
 const query = groq`*[_type == "blogNew"][0]`;
 const queryHome = groq`*[_type == "home"][0].conversion`;
-const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
 const postsQuery = groq`*[_type == "post"] | order(_createdAt desc)`;
 
 function BlogPage(props) {
@@ -31,7 +30,6 @@ function BlogPage(props) {
 export async function getStaticProps({ params = {}, preview = false }) {
   const blogData = await getClient(preview).fetch(query);
   const postData = await getClient(preview).fetch(postsQuery);
-  const LayoutData = await getClient(preview).fetch(querySiteConfig);
   const homeData = await getClient(preview).fetch(queryHome);
 
   return {
@@ -39,7 +37,6 @@ export async function getStaticProps({ params = {}, preview = false }) {
       preview,
       blogData,
       postData,
-      LayoutData,
       homeData,
     },
   };
