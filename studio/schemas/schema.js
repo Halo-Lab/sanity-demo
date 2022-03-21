@@ -8,14 +8,18 @@ import category from "./documents/category";
 import post from "./documents/post";
 import home from "./documents/home";
 import blog from "./documents/blog";
-
+import blogNew from "./documents/blogNew";
 import hero from "./objects/hero";
-import about from "./objects/about";
+import recommended from "./objects/recommended";
 import features from "./objects/features";
-import testimonial from "./objects/testimonial";
 import blockContent from "./objects/blockContent";
-
+import partners from "./objects/partners";
 import siteConfig from "./documents/siteConfig";
+import benefits from "./objects/benefits";
+import stats from "./objects/stats";
+import mobileApp from "./objects/mobileApp";
+import testimonails from "./objects/testimonials";
+import conversion from "./objects/conversion";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,14 +31,20 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
+    partners,
     category,
     siteConfig,
     home,
     blog,
+    blogNew,
     hero,
-    about,
     features,
-    testimonial,
     blockContent,
+    benefits,
+    stats,
+    recommended,
+    mobileApp,
+    testimonails,
+    conversion,
   ]),
 });

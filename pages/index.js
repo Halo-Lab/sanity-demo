@@ -9,6 +9,11 @@ const query = groq`*[_type=="home"][0] {
  hero {
     ...,
     "mainImage": mainImage.asset->
+  },
+  partners {
+    
+    ...,
+    "parnerIcon": partnerIcon.asset->
   }
 }`;
 
@@ -33,7 +38,6 @@ function IndexPage(props) {
 
 export async function getStaticProps({ params = {}, preview = false }) {
   const productsData = await getClient(preview).fetch(query);
-
   return {
     props: {
       preview,

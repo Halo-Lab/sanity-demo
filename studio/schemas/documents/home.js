@@ -15,21 +15,35 @@ export default {
       name: "slug",
       type: "string",
       title: "Slug",
-      readOnly: true,
+      // readOnly: true,
     },
-    { name: "newField", type: "string", title: "New Field" },
-
     {
       name: "hero",
       type: "hero",
     },
     {
-      name: "about",
-      type: "about",
+      name: "partners",
+      type: "partners",
     },
     {
-      name: "features",
-      type: "features",
+      name: "benefits",
+      type: "benefits",
+    },
+    {
+      name: "stats",
+      type: "stats",
+    },
+    {
+      name: "mobileApp",
+      type: "mobileApp",
+    },
+    {
+      name: "testimonials",
+      type: "testimonials",
+    },
+    {
+      name: "conversion",
+      type: "conversion",
     },
   ],
 

@@ -1,32 +1,32 @@
 import { groq } from "next-sanity";
 import { getClient, usePreviewSubscription, urlFor } from "../../utils/sanity";
 import BlockContent from "@sanity/block-content-to-react";
+import Post from "../../scenes/Post/Post";
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]`;
+const queryBlog = groq`*[_type == "blogNew"][0]`;
+const queryHome = groq`*[_type == "home"][0].conversion`;
+const postsQuery = groq`*[_type == "post"]`;
 
-function PostPage({ postData, preview }) {
+function PostPage({ postData, blogData, allPostData, homeData, preview }) {
   const { data: post = {} } = usePreviewSubscription(query, {
     params: { slug: postData?.slug?.current },
     initialData: postData,
     enabled: true,
   });
 
-  const { title, mainImage, text } = post;
+  const { data } = usePreviewSubscription(queryBlog, {
+    initialData: blogData ?? "",
+    enabled: true,
+  });
+
   return (
     <div>
-      <h1>{title}</h1>
-      <img
-        src={urlFor(mainImage)
-          .auto("format")
-          .fit("crop")
-          .width(1920)
-          .quality(80)}
-      />
-      <BlockContent
-        blocks={text}
-        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-        className="markdown"
+      <Post
+        post={post}
+        data={data}
+        allPostData={allPostData}
+        homeData={homeData}
       />
     </div>
   );
@@ -37,8 +37,12 @@ export async function getStaticProps({ params, preview = false }) {
     slug: params.slug,
   });
 
+  const allPostData = await getClient(preview).fetch(postsQuery);
+  const blogData = await getClient(preview).fetch(queryBlog);
+  const homeData = await getClient(preview).fetch(queryHome);
+
   return {
-    props: { preview, postData },
+    props: { preview, postData, blogData, allPostData, homeData },
   };
 }
 

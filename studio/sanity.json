@@ -2,7 +2,8 @@
   "root": true,
   "api": {
     "projectId": "bfh5b7c9",
-    "dataset": "production"
+    "dataset": "production",
+    "apiVersion": "2021-08-31"
   },
   "project": {
     "name": "Sanity demo",
@@ -19,9 +20,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
