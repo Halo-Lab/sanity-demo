@@ -3,8 +3,9 @@ import ButtonPrimary from "../../../../components/Buttons/ButtonPrimary/ButtonPr
 import ButtonWithArrow from "../../../../components/Buttons/ButtonWithArrow/ButtonWithArrow";
 import { urlFor } from "../../../../utils/sanity";
 
-const Hero = ({ data }) => {
-  const { hero } = data;
+const Hero = ({ hero }) => {
+  const { buttonArrowObj, buttonPrimaryObj } = hero;
+
   return (
     <div className="section">
       <div className={s.hero}>
@@ -15,18 +16,20 @@ const Hero = ({ data }) => {
                 <h1 className={s.heroTitle}>{hero.title}</h1>
                 <p className={s.heroDesc}>{hero.description}</p>
                 <div className={s.heroFooter}>
-                  <ButtonPrimary buttonText={"Lets start"} />
-                  <ButtonWithArrow buttonText={"About app"} />
+                  <ButtonPrimary
+                    buttonText={buttonPrimaryObj.buttonPrimaryTitle}
+                    buttonLink={buttonPrimaryObj.buttonPrimaryLink}
+                  />
+                  <ButtonWithArrow
+                    buttonText={buttonArrowObj.buttonArrowTitle}
+                    buttonLink={buttonArrowObj.buttonArrowLink}
+                  />
                 </div>
               </div>
               <div className={s.video}>
                 <img
                   className={s.videoImg}
-                  src={urlFor(hero.mainImage)
-                    .auto("format")
-                    .fit("crop")
-                    .width(1920)
-                    .quality(100)}
+                  src={urlFor(hero.mainImage)}
                   alt={hero.mainImage.alt}
                 />
               </div>

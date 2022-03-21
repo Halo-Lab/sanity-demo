@@ -14,11 +14,7 @@ const Footer = ({ LayoutData }) => {
         <div className={styles.footerTop}>
           <Link href="/">
             <a>
-              <img
-                className="logo"
-                style={{ width: 192 }}
-                src={urlFor(footerLogo)}
-              />
+              <img className="logo" src={urlFor(footerLogo)} />
             </a>
           </Link>
           <Social footerSocialsArr={footerSocialsArr} />
@@ -27,7 +23,7 @@ const Footer = ({ LayoutData }) => {
           <div className={styles.copyright}>
             <span className={styles.copyrightText}>{footerCopyrights}</span>
             <div className={styles.copyrightCompany}>
-              <div className={styles.copyrightCompanyImg} style={{ width: 20 }}>
+              <div className={styles.copyrightCompanyImg}>
                 <img src={urlFor(companyLogo)} alt="Halo Lab icon" />
               </div>
               <span className={styles.copyrightCompanyName}>

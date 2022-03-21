@@ -51,7 +51,7 @@ const currentBlogPage = S.listItem()
   .icon(FiBook)
   .child(async () => {
     const data = await sanityClient.fetch(`
-  *[_type == "blog"][0]`);
+  *[_type == "blogNew"][0]`);
 
     if (!data)
       return S.component(() => (
@@ -67,7 +67,7 @@ const currentBlogPage = S.listItem()
 
     return S.document()
       .id(data._id)
-      .schemaType("blog")
+      .schemaType("blogNew")
       .views([
         S.view.form(),
         S.view.component(PagePreview).title("Page Preview"),
@@ -99,7 +99,6 @@ export default () =>
               currentBlogPage,
             ])
         ),
-      // ...S.documentTypeListItems().filter(hiddenDocTypes),
     ]);
 
 export const getDefaultDocumentNode = (props) => {

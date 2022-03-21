@@ -1,14 +1,12 @@
-import s from "./Layout.module.scss";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-function Layout({ children }) {
-  const { LayoutData } = children.props;
+function Layout({ siteconfig, children }) {
   return (
     <div>
-      <Header LayoutData={LayoutData} />
-      <main className="main2">{children}</main>
-      <Footer LayoutData={LayoutData} />
+      <Header LayoutData={siteconfig} />
+      <main>{children}</main>
+      <Footer LayoutData={siteconfig} />
     </div>
   );
 }

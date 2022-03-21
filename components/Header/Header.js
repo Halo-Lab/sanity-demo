@@ -14,13 +14,13 @@ const Header = ({ LayoutData }) => {
         <div className={styles.headerWrap}>
           <Link href="/">
             <a>
-              <img className="logo" style={{ width: 192 }} src={urlFor(logo)} />
+              <img className="logo" src={urlFor(logo)} />
             </a>
           </Link>
           <div className={styles.headerRight}>
             <Navigation headerLinkArr={headerLinkArr} />
             <ButtonPrimary
-              buttonLink={buttonLink}
+              buttonLink={buttonLink.current}
               mod="button--second-type"
               buttonText={buttonText}
             />

@@ -8,11 +8,10 @@ import category from "./documents/category";
 import post from "./documents/post";
 import home from "./documents/home";
 import blog from "./documents/blog";
-
+import blogNew from "./documents/blogNew";
 import hero from "./objects/hero";
-// import about from "./objects/about";
+import recommended from "./objects/recommended";
 import features from "./objects/features";
-import testimonial from "./objects/testimonial";
 import blockContent from "./objects/blockContent";
 import partners from "./objects/partners";
 import siteConfig from "./documents/siteConfig";
@@ -37,12 +36,13 @@ export default createSchema({
     siteConfig,
     home,
     blog,
+    blogNew,
     hero,
     features,
-    testimonial,
     blockContent,
     benefits,
     stats,
+    recommended,
     mobileApp,
     testimonails,
     conversion,

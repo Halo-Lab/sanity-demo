@@ -4,13 +4,12 @@ import { getClient, usePreviewSubscription } from "../../utils/sanity";
 import React from "react";
 import Blog from "../../scenes/Blog/Blog";
 
-const query = groq`*[_type == "blog"][0]`;
-const querySiteConfig = groq`*[_type=="siteConfig"][0]`;
-
-const postsQuery = groq`*[_type == "post"]`;
+const query = groq`*[_type == "blogNew"][0]`;
+const queryHome = groq`*[_type == "home"][0].conversion`;
+const postsQuery = groq`*[_type == "post"] | order(_createdAt desc)`;
 
 function BlogPage(props) {
-  const { blogData, postData, preview } = props;
+  const { blogData, postData, preview, homeData } = props;
 
   const { data } = usePreviewSubscription(query, {
     initialData: blogData ?? "",
@@ -21,13 +20,9 @@ function BlogPage(props) {
     initialData: postData,
     enabled: true,
   });
-
-  const { title } = data;
-
   return (
     <div>
-      <h1>{title}</h1>
-      <Blog data={data} />
+      <Blog data={data} postData={postData} homeData={homeData} />
     </div>
   );
 }
@@ -35,14 +30,14 @@ function BlogPage(props) {
 export async function getStaticProps({ params = {}, preview = false }) {
   const blogData = await getClient(preview).fetch(query);
   const postData = await getClient(preview).fetch(postsQuery);
-  const LayoutData = await getClient(preview).fetch(querySiteConfig);
+  const homeData = await getClient(preview).fetch(queryHome);
 
   return {
     props: {
       preview,
       blogData,
       postData,
-      LayoutData,
+      homeData,
     },
   };
 }

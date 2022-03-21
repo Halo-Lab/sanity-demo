@@ -3,7 +3,6 @@ import styles from "./Social.module.scss";
 import { urlFor } from "../../utils/sanity";
 
 const Social = ({ footerSocialsArr }) => {
-  console.log(footerSocialsArr);
   const socialLinks = footerSocialsArr.map((item, index) => {
     const { socialIcon, socialLink, socialTitle } = item;
 
@@ -11,8 +10,8 @@ const Social = ({ footerSocialsArr }) => {
       <li className={styles.socialItem} key={index}>
         <a href={socialLink.current}>
           <img
+            className={styles.socialIcon}
             loading="lazy"
-            style={{ width: 24 }}
             src={urlFor(socialIcon)}
             alt={socialTitle}
           />

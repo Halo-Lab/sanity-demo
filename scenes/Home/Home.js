@@ -7,15 +7,16 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Conversion from "./components/Conversion/Conversion";
 
 const Home = ({ data }) => {
+  const { conversion, hero, mobileApp, partners, stats, testimonials } = data;
   return (
     <div className="homepage">
-      <Hero data={data} />
+      <Hero hero={hero} />
       <Partners data={data} />
       <Benefits data={data} />
       <Stats data={data} />
-      <MobileApp data={data} />
-      <Testimonials data={data} />
-      <Conversion data={data} />
+      <MobileApp mobileApp={mobileApp} />
+      <Testimonials testimonials={testimonials} />
+      <Conversion conversion={conversion} />
     </div>
   );
 };

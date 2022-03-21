@@ -1,12 +1,11 @@
 import styles from "./Conversion.module.scss";
 import { urlFor } from "../../../../utils/sanity";
 import classNames from "classnames";
-import ArrowIcon from "../../../../assets/ArrowIcon";
+import ArrowIcon from "../../../../assets/ArrowIcon/ArrowIcon";
 import ReplyIcon from "../../../../assets/ReplyIcon/ReplyIcon";
 import ButtonSend from "../../../../components/Buttons/ButtonSend/ButtonSend";
 
-const Conversion = ({ data }) => {
-  const { conversion } = data;
+const Conversion = ({ conversion }) => {
   const {
     title,
     backgroundImage,
@@ -15,7 +14,6 @@ const Conversion = ({ data }) => {
     mainImage,
     stickerObj,
   } = conversion;
-  // const {icon, title } = stickerObj
 
   return (
     <div className="section section--conversion">
@@ -52,19 +50,15 @@ const Conversion = ({ data }) => {
                     <ReplyIcon />
                   </div>
                   <img
-                    src={urlFor(stickerObj.icon)}
+                    src={urlFor(stickerObj.stickerIcon)}
                     className={styles.stickerImg}
-                    alt={stickerObj.title}
+                    alt={stickerObj.stickerTitle}
                   />
                   <span className={styles.conversionReplyText}>
-                    {stickerObj.title}
+                    {stickerObj.stickerTitle}
                   </span>
                 </div>
-                <img
-                  src={urlFor(mainImage)}
-                  imgStyle={{ objectFit: "contain" }}
-                  alt={"modern woomen"}
-                />
+                <img src={urlFor(mainImage)} alt={"modern woomen"} />
               </div>
             </div>
           </div>

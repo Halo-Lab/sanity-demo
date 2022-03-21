@@ -2,12 +2,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media screen and (max-width: 575px) {
+  &:nth-child(1) {
+    img {
+      max-width: 90px;
+    }
+  }
+  &:nth-child(2) {
+    .img {
+      max-width: 84px;
+    }
+  }
+  &:nth-child(3) {
+    .img {
+      max-width: 84px;
+    }
+  }
+  &:nth-child(4) {
+    .img {
+      max-width: 122px;
+    }
+  }
+  &:nth-child(5) {
+    .img {
+      max-width: 111px;
+    }
+  }
+  &:nth-child(6) {
+    .img {
+      max-width: 80px;
+    }
+  }
+  @media screen and (max-width: 768px) {
     width: 45%;
   }
-}
-.img {
-  width: 90px;
-  height: 28px;
 }
