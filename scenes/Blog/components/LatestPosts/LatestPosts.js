@@ -76,7 +76,7 @@ const LatestPosts = ({ postData, recommended = {}, pageType }) => {
           </div>
         )}
         <div className={styles.postsInner}>
-          {recommendedPost(postData, pageType, isMobile)}
+          {postData && recommendedPost(postData, pageType, isMobile)}
         </div>
       </div>
     </div>
