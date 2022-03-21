@@ -6,8 +6,7 @@
     "apiVersion": "2021-08-31"
   },
   "project": {
-    "name": "Sanity demo",
-    "basePath": "/studio"
+    "name": "Sanity demo"
   },
   "plugins": [
     "@sanity/base",
