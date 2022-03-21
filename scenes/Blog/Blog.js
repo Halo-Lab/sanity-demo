@@ -1,4 +1,4 @@
-import BlogHero from "./components/blogHero/BlogHero";
+import BlogHero from "./components/BlogHero/BlogHero";
 import LatestPosts from "./components/LatestPosts/LatestPosts";
 import Conversion from "../Home/components/Conversion/Conversion";
 import styles from "./Blog.module.scss";
