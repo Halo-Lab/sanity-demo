@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./IframePreview.css";
 
+const basePath = process.env.SANITY_STUDIO_PROJECT_PATH;
+
 export default function ProductsPreview(props) {
   const { displayed } = props.document;
   if (!displayed?.slug) {
@@ -11,7 +13,7 @@ export default function ProductsPreview(props) {
     props.document.displayed._type === "home" ? "" : displayed?.slug;
   const url =
     process.env.NODE_ENV === "production"
-      ? `../../${pageSlug}?preview`
+      ? `${basePath}/${pageSlug}?preview`
       : `http://localhost:3000/${pageSlug}?preview`;
 
   return (
