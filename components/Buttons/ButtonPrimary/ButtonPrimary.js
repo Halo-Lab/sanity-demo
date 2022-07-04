@@ -2,7 +2,7 @@ import s from "./ButtonPrimary.module.scss";
 import classnames from "classnames";
 
 const ButtonPrimary = ({
-  buttonLink = "https://www.halo-lab.com/",
+  buttonLink = "#",
   buttonText = "Read this article",
   mod,
   Icon,
